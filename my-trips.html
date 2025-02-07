@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/my-trips.css" />
+    <!-- <link rel="stylesheet" href="styles/main.css" /> -->
+    <!--<link rel="stylesheet" href="styles/main.scss" />-->
+    <title>Personlig startsida | Färdtjänst Örebro</title>
+    <!-- <script
+      src="https://kit.fontawesome.com/f407e26bd6.js"
+      crossorigin="anonymous"
+    ></script> -->
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Hoppa till innehåll</a>
+    <div class="container">
+      <header class="menu">
+        <a href="index.html" class="logo-container" rel="noopener noreferrer">
+          <img
+            src="src/images/fardtjanst-orebro_logo.svg"
+            alt="Färdtjänst Örebros startsida"
+            class="logo"
+          />
+          <span class="company-name">Färdtjänst Örebro</span>
+        </a>
+        <button
+          class="hamburger-menu"
+          aria-label="Öppna meny"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" aria-label="Huvudmeny">
+          <ul class="menu-items">
+            <!-- "Mina resor" är tillgänglig efter inloggning -->
+            <li>
+              <a href="#my-trips"
+                ><i class="fas fa-calendar-check"></i> Mina resor</a
+              >
+            </li>
+            <!-- "Priser och regler" är en standardsida som är tillgänglig även utan inloggning -->
+            <li>
+              <a href="prices-and-rules.html"
+                ><i class="fas fa-balance-scale"></i> Priser och regler</a
+              >
+            </li>
+            <!-- "Om oss" är en standardsida som är tillgänglig även utan inloggning -->
+            <li>
+              <a href="#"><i class="fas fa-users"></i> Om oss</a>
+            </li>
+            <!-- "Kontakta oss" är en standardsida som är tillgänglig även utan inloggning -->
+            <li>
+              <a href="#"><i class="fas fa-envelope"></i> Kontakta oss</a>
+            </li>
+            <!-- "Min profil" är tillgänglig efter inloggning -->
+            <li>
+              <a href="#"><i class="fas fa-user"></i> Min profil</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <div class="top-grid">
+            <div class="left">
+              <h1>Välkommen Maria!</h1>
+
+              <p>
+                Här kan du boka en ny resa, ändra en bokning eller avboka en
+                resa.
+              </p>
+              <h2>Boka ny resa</h2>
+              <p>Det går att boka enkel resa eller tur- och returresa</p>
+              <p>
+                Båda alternativen kan göras återkommande, om du vill ha en
+                stående bokning för specifika dagar.
+              </p>
+            </div>
+            <div class="right">
+              <h2>Ändra bokning eller avboka resa</h2>
+              <p>Här kan du hantera dina bokningar.</p>
+              <p>
+                Du har möjlighet att redigera din resa eller avboka den helt.
+              </p>
+              <div class="collapsible">
+                <button
+                  class="collapsible-header"
+                  aria-expanded="false"
+                  aria-controls="myBookings"
+                >
+                  <span class="arrow">&#9656;</span>
+                  <h3>Mina aktuella bokningar</h3>
+                </button>
+                <div class="collapsible-content" id="myBookings">
+                  <p>Nedan ser du en lista över dina kommande resor.</p>
+                  <p>Du kan välja att redigera en bokning eller avboka.</p>
+
+                  <table class="booking-table">
+                    <thead>
+                      <tr>
+                        <th rowspan="2">Resa</th>
+                        <th>Resmål</th>
+                        <th>Status</th>
+                        <th>Ändra bokning</th>
+                      </tr>
+                      <tr>
+                        <th>Datum</th>
+                        <th>Tid</th>
+                        <th>Avboka</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td rowspan="2">16</td>
+                        <td>Enkel Hem-Apoteket</td>
+                        <td>Bokad</td>
+                        <td>
+                          <button class="edit-btn">Redigera</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>14 mars 2025</td>
+                        <td>10:00</td>
+                        <td>
+                          <button class="delete-btn" onclick="confirmDelete()">
+                            Avboka
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td rowspan="2">17</td>
+                        <td>Enkel Apoteket-Hem</td>
+                        <td>Bokad</td>
+                        <td>
+                          <button class="edit-btn">Redigera</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>14 mars 2025</td>
+                        <td>11:30</td>
+                        <td>
+                          <button class="delete-btn" onclick="confirmDelete()">
+                            Avboka
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <!-- Flikarna -->
+          <div class="tab-section">
+            <div class="tab-container" role="tablist">
+              <button
+                class="tab active"
+                role="tab"
+                id="tab1-btn"
+                aria-controls="tab1"
+                aria-selected="true"
+                onclick="openTab(event, 'tab1')"
+              >
+                <span
+                  class="tooltip"
+                  title="Välj denna flik för att boka en enkelresa"
+                  ><i class="fas fa-home"></i>
+                  <span class="h2-style">Enkel resa</span></span
+                >
+              </button>
+              <button
+                class="tab"
+                role="tab"
+                id="tab2-btn"
+                aria-controls="tab2"
+                aria-selected="false"
+                onclick="openTab(event, 'tab2')"
+              >
+                <span
+                  class="tooltip"
+                  title="Välj denna flik för att boka en Tur- och returresa"
+                  ><i class="fas fa-car"></i>
+                  <span class="h2-style">Tur och retur</span></span
+                >
+              </button>
+              <!-- <button class="tab" onclick="openTab(event, 'tab3')">
+                <i class="fas fa-user"></i> Flik 3
+              </button> -->
+            </div>
+
+            <!-- Innehåll för flikarna -->
+            <div class="tab-main-container">
+              <div
+                id="tab1"
+                class="tab-content active"
+                role="tabpanel"
+                aria-labelledby="tab1-btn"
+                aria-hidden="false"
+              >
+                <div class="form-container">
+                  <form id="booking-form-tab1">
+                    <h3
+                      class="tooltip"
+                      title="Välj avgångsplats och destination för din resa."
+                    >
+                      Grundinställningar
+                    </h3>
+                    <div class="grid-one">
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Ange ett namn för bokningen, t.ex. 'Hem till mamma' eller 'Handla på Coop'."
+                          >
+                            <label class="section-title" for="booking-name"
+                              ><i class="fas fa-pencil-alt"></i> Namnge ny
+                              bokning</label
+                            ></span
+                          >
+                          <input
+                            type="text"
+                            id="booking-name"
+                            class="input-field"
+                            placeholder="Välj ett namn"
+                            value="04/04/2025 Hem -> Dotter"
+                          />
+                        </div>
+                      </div>
+                      <div class="item">
+                        <span
+                          class="tooltip"
+                          title="Välj detta alternativ för att automatiskt fylla i din senaste bokning."
+                        >
+                          <label for="last-booking" class="section-title">
+                            <i class="fas fa-sync-alt"></i>
+                            Återanvänd min senaste bokning</label
+                          ></span
+                        ><br />
+                        <input type="checkbox" id="last-booking" checked />
+                      </div>
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj detta alternativ för att automatiskt fylla i från tidigare bokningar."
+                          >
+                            <label
+                              class="section-title"
+                              for="important-bookings"
+                            >
+                              <i
+                                class="fas fa-sync-alt"
+                                title="Välj en tidigare bokning att återanvända"
+                              ></i>
+                              Återanvänd en tidigare bokning
+                            </label></span
+                          >
+
+                          <div class="dropdown-container">
+                            <select id="important-bookings">
+                              <option value="">Välj</option>
+                              <option value="03022025-hem-apotek">
+                                03/02/2025 Hem -> Apotek
+                              </option>
+                              <option value="03022025-apotek-hem">
+                                03/02/2025 Apotek -> Hem
+                              </option>
+                              <option value="05032025-hem-sonen">
+                                05/03/2025 Hem -> Sonen
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h3
+                      class="tooltip"
+                      title="Välj avgångsplats och destination för din resa."
+                    >
+                      Avgång och destination
+                    </h3>
+                    <div class="grid-two">
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Ange var du åker ifrån. Detta är startpunkten för resan."
+                          >
+                            <i class="fas fa-map-marker-alt"></i>
+                            <label class="section-title" for="departure2">
+                              Jag åker från</label
+                            ></span
+                          >
+                        </div>
+                        <div>
+                          <select
+                            id="departure2"
+                            onchange="toggleCustomInput('departure2', 'custom-departure2')"
+                          >
+                            <option value="">Ange avgångsadress</option>
+                            <option value="min-aktuella-position">
+                              Min aktuella position
+                            </option>
+                            <option value="mitt-hem" selected>Mitt hem</option>
+                            <option value="min-arbetsplats">
+                              Min arbetsplats
+                            </option>
+                            <option value="dotterns-hem">Dotterns hem</option>
+                            <option value="ica">ICA</option>
+                            <option value="custom">Ange ny adress...</option>
+                          </select>
+                        </div>
+                        <input
+                          type="text"
+                          id="custom-departure2"
+                          class="custom-input"
+                          placeholder="Ange ny adress"
+                        />
+                      </div>
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj datumet då du vill resa"
+                          >
+                            <i class="fas fa-calendar-day"></i>
+                            <label for="start-date-tab1"
+                              >Ange startdatum</label
+                            ></span
+                          >
+                          <input type="date" id="start-date-tab1" />
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="time-container">
+                          <!-- Flexbox för att hålla elementen i rad -->
+                          <!-- Label för starttid --><span
+                            class="tooltip"
+                            title="Ange starttid för resan"
+                          >
+                            <label for="start-time-tab1">
+                              <i class="fas fa-clock"></i> Ange starttid
+                            </label>
+                          </span>
+
+                          <!-- Tid-input -->
+                          <input type="time" id="start-time-tab1" />
+                          <span
+                            class="tooltip"
+                            title="Innebär att upphämtningstiden styr. Ankomsttiden kan variera beroende på till exempel trafik."
+                          >
+                            <!-- Checkbox-container för styrtid -->
+                            <div class="checkbox-container">
+                              <input
+                                type="checkbox"
+                                id="from-time-control-tab1"
+                                onclick="toggleTimeControl('tab1', 'from')"
+                                checked
+                              />
+                              <!-- Label + tooltip för styrtid -->
+                              <label for="from-time-control-tab1">
+                                Styrtid
+                                <i class="fas fa-info-circle"></i>
+                              </label></div
+                          ></span>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Ange var du ska åka till. Detta är destinationen för resan."
+                          >
+                            <i class="fas fa-map-marker-alt"></i>
+                            <label class="section-title" for="destination2">
+                              Jag åker till</label
+                            ></span
+                          >
+                        </div>
+                        <div>
+                          <select
+                            id="destination2"
+                            onchange="toggleCustomInput('destination2', 'custom-destination2')"
+                          >
+                            <option value="">Ange ankomstadress</option>
+                            <option value="mitt-hem">Mitt hem</option>
+                            <option value="min-arbetsplats">
+                              Min arbetsplats
+                            </option>
+                            <option value="dotterns-hem" selected>
+                              Dotterns hem
+                            </option>
+                            <option value="ica">ICA</option>
+                            <option value="custom">Ange ny adress...</option>
+                          </select>
+                        </div>
+                        <input
+                          type="text"
+                          id="custom-destination2"
+                          class="custom-input"
+                          placeholder="Ange ny adress"
+                        />
+                      </div>
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj datumet då du vill vara framme"
+                          >
+                            <i class="fas fa-calendar-check"></i>
+                            <label for="end-date-tab1"
+                              >Ange slutdatum</label
+                            ></span
+                          >
+                          <input type="date" id="end-date-tab1" />
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="time-container">
+                          <!-- Tooltip för sluttid -->
+                          <span class="tooltip" title="Ange sluttid för resan">
+                            <label for="end-time-tab1">
+                              <i class="fas fa-clock"></i> Ange sluttid
+                            </label>
+                          </span>
+
+                          <!-- Tid-input -->
+                          <input type="time" id="end-time-tab1" />
+
+                          <span
+                            class="tooltip"
+                            title="Om du behöver vara framme en viss tid, planeras upphämtningen utifrån detta. Chauffören beräknar avgångstiden baserat på trafik och restid för att ankomsttiden ska hållas."
+                          >
+                            <!-- Checkbox-container för styrtid -->
+                            <div class="checkbox-container">
+                              <input
+                                type="checkbox"
+                                id="to-time-control-tab1"
+                                onclick="toggleTimeControl('tab1', 'to')"
+                              />
+                              <!-- Label + tooltip för styrtid -->
+                              <label for="to-time-control-tab1">
+                                Styrtid
+                                <i class="fas fa-info-circle"></i>
+                              </label>
+                            </div>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <h3
+                      class="tooltip"
+                      title="Välj hur ofta resan ska bokas – en gång eller som en återkommande bokning."
+                    >
+                      Bokningsfrekvens
+                    </h3>
+                    <div class="grid-three">
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj bokningsfrekvens. 'Boka endast denna resa' skapar en engångsbokning, medan 'Schemalagd bokning' upprepar resan enligt ett schema."
+                          >
+                            <i class="fas fa-sync-alt"></i>
+
+                            <label for="booking-frequency-tab1"
+                              >Frekvens</label
+                            ></span
+                          >
+                          <select
+                            id="booking-frequency-tab1"
+                            onchange="toggleRecurringBooking()"
+                          >
+                            <option value="once">Boka endast denna resa</option>
+                            <option value="recurring">
+                              Schemalagd bokning
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj hur ofta bokningen ska upprepas. Intervallet baseras på den ursprungliga bokningen. Exempel: Om du bokar 'En gång i veckan' den 1 januari, schemaläggs nästa bokning den 8 januari (1 januari + 7 dagar)."
+                          >
+                            <i class="fas fa-location-arrow"></i>
+                            <label for="interval-tab1">Intervall</label>
+                          </span>
+                          <select id="interval-tab1">
+                            <option value="">Välj intervall</option>
+                            <option value="daily">Varje dag</option>
+                            <option value="weekly" selected>
+                              En gång i veckan
+                            </option>
+                            <option value="biweekly">Varannan vecka</option>
+                            <option value="monthly">En gång i månaden</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj datum för när den återkommande bokningen ska starta."
+                          >
+                            <i class="fas fa-calendar-day"></i>
+
+                            <label for="start-date-coming-tab1"
+                              >Start återkommande bokning</label
+                            ></span
+                          >
+                          <input
+                            type="date"
+                            id="start-date-coming-tab1"
+                            class="disabled"
+                            disabled
+                          />
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj datum för när den återkommande bokningen ska avslutas."
+                          >
+                            <i class="fas fa-calendar-check"></i>
+
+                            <label for="end-date-coming-tab1"
+                              >Slut återkommande bokning</label
+                            ></span
+                          >
+                          <input
+                            type="date"
+                            id="end-date-coming-tab1"
+                            class="disabled"
+                            disabled
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <h3
+                      class="tooltip"
+                      title="Här kan du ange om du behöver hjälpmedel eller särskilda behov för din resa"
+                    >
+                      Hjälpmedel och övriga behov
+                    </h3>
+                    <div class="grid-four">
+                      <div class="item">
+                        <div class="section-title">
+                          <div
+                            class="tooltip"
+                            title="Välj eventuella hjälpmedel som du behöver under resan"
+                          >
+                            <div class="section-titel">
+                              <i class="fas fa-wheelchair"></i> Hjälpmedel
+                            </div>
+                          </div>
+                        </div>
+                        <div class="checkbox-group">
+                          <div class="checkbox-item">
+                            <div
+                              class="tooltip"
+                              title="Ta gärna med dig en käpp eller en krycka"
+                            >
+                              <label>
+                                <input type="checkbox" /> Käpp eller krycka
+                                <i class="fas fa-cane"></i>
+                              </label>
+                            </div>
+                          </div>
+
+                          <div class="checkbox-item">
+                            <div
+                              class="tooltip"
+                              title="Ta gärna med dig din rullator"
+                            >
+                              <label>
+                                <input type="checkbox" /> Rullator
+                                <i class="fas fa-walking"></i>
+                              </label>
+                            </div>
+                          </div>
+
+                          <div class="checkbox-item">
+                            <div
+                              class="tooltip"
+                              title="Om du tar med din rullstol bokas du automatiskt för ett specialfordon, så att rullstolen får plats."
+                            >
+                              <label for="wheelchair-tab1">
+                                <input type="checkbox" id="wheelchair-tab1" />
+                                Rullstol
+                                <i class="fas fa-wheelchair"></i>
+                              </label>
+                            </div>
+                          </div>
+
+                          <div class="checkbox-item">
+                            <div
+                              class="tooltip"
+                              title="En ledsagare eller medpassagerare får följa med"
+                            >
+                              <label>
+                                <input type="checkbox" /> Ledsagare /
+                                medpassagerare
+                                <i class="fas fa-user-friends"></i>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <span
+                          class="tooltip"
+                          title="Ange övriga behov som du kan behöva under resan."
+                        >
+                          <div class="section-title">Övrigt</div></span
+                        >
+                        <div class="checkbox-group">
+                          <div class="checkbox-item">
+                            <div
+                              class="tooltip"
+                              title="Det ingår alltid att få hjälp vid på- och avstigning, dock inte till porten"
+                            >
+                              <label
+                                ><input type="checkbox" checked disabled />
+                                Hjälp vid på- och avstigning
+                                <i class="fas fa-hands-helping"></i
+                              ></label>
+                            </div>
+                          </div>
+                          <div class="checkbox-item">
+                            <div
+                              class="tooltip"
+                              title="Max 1 resväska eller 2 kassar är tillåtet"
+                            >
+                              <label
+                                ><input type="checkbox" checked disabled /> Max
+                                1 resväska eller 2 kassar
+                                <i class="fas fa-shopping-bag"></i
+                              ></label>
+                            </div>
+                          </div>
+                          <div class="checkbox-item">
+                            <div
+                              class="tooltip"
+                              title="Specialfordon bokas automatiskt om rullstol anges under hjälpmedel"
+                            >
+                              <label for="special-vehicle-tab1"
+                                ><input
+                                  type="checkbox"
+                                  id="special-vehicle-tab1"
+                                  disabled />
+                                Specialfordon <i class="fas fa-bus"></i
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="button-group">
+                      <button
+                        type="submit"
+                        class="btn login"
+                        id="book-single-trip"
+                      >
+                        Boka enkel resa
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Ny TAB: Tur och retur -->
+
+              <div
+                id="tab2"
+                class="tab-content"
+                role="tabpanel"
+                aria-labelledby="tab2-btn"
+                aria-hidden="true"
+              >
+                <div class="form-container">
+                  <form id="booking-form-tab2">
+                    <h3
+                      class="tooltip"
+                      title="Välj avgångsplats och destination för din resa."
+                    >
+                      Grundinställningar
+                    </h3>
+                    <div class="grid-one">
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Ange ett namn för bokningen, t.ex. 'Hem till mamma' eller 'Handla på Coop'."
+                          >
+                            <label class="section-title" for="booking-name"
+                              ><i class="fas fa-pencil-alt"></i> Namnge ny
+                              bokning</label
+                            ></span
+                          >
+                          <input
+                            type="text"
+                            id="booking-name"
+                            class="input-field"
+                            placeholder="Välj ett namn"
+                            value="04/04/2025 Hem -> Dotter -> Hem"
+                          />
+                        </div>
+                      </div>
+                      <div class="item">
+                        <span
+                          class="tooltip"
+                          title="Välj detta alternativ för att automatiskt fylla i din senaste bokning."
+                        >
+                          <label for="last-booking" class="section-title">
+                            <i class="fas fa-sync-alt"></i>
+                            Återanvänd min senaste Tur- och Returbokning</label
+                          ></span
+                        ><br />
+                        <input type="checkbox" id="last-booking" checked />
+                      </div>
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj detta alternativ för att automatiskt fylla i från tidigare bokningar."
+                          >
+                            <label
+                              class="section-title"
+                              for="important-bookings"
+                            >
+                              <i
+                                class="fas fa-sync-alt"
+                                title="Välj en tidigare bokning att återanvända"
+                              ></i>
+                              Återanvänd en tidigare Tur- och Returbokning
+                            </label></span
+                          >
+
+                          <div class="dropdown-container">
+                            <select id="important-bookings">
+                              <option value="">Välj</option>
+                              <option value="03022025-hem-apotek">
+                                03/02/2025 Hem -> Apotek -> Hem
+                              </option>
+                              <option value="03022025-apotek-hem">
+                                03/02/2025 Apotek -> Hem -> Apotek
+                              </option>
+                              <option value="05032025-hem-sonen">
+                                05/03/2025 Hem -> Sonen -> Hem
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h3
+                      class="tooltip"
+                      title="Välj avgångsplats och destination för din resa."
+                    >
+                      Utresa
+                    </h3>
+                    <div class="grid-two">
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Ange var du åker ifrån. Detta är startpunkten för resan."
+                          >
+                            <i class="fas fa-map-marker-alt"></i>
+                            <label class="section-title" for="departure1">
+                              Jag åker från</label
+                            ></span
+                          >
+                        </div>
+                        <div>
+                          <select
+                            id="departure1"
+                            onchange="toggleCustomInput('departure1', 'custom-departure1')"
+                          >
+                            <option value="">Ange avgångsadress</option>
+                            <option value="min-aktuella-position">
+                              Min aktuella position
+                            </option>
+                            <option value="mitt-hem" selected>Mitt hem</option>
+                            <option value="min-arbetsplats">
+                              Min arbetsplats
+                            </option>
+                            <option value="dotterns-hem">Dotterns hem</option>
+                            <option value="ica">ICA</option>
+                            <option value="custom">Ange ny adress...</option>
+                          </select>
+                        </div>
+                        <input
+                          type="text"
+                          id="custom-departure1"
+                          class="custom-input"
+                          placeholder="Ange ny adress"
+                        />
+                      </div>
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj datumet då du vill resa"
+                          >
+                            <i class="fas fa-calendar-day"></i>
+                            <label for="start-date-tab2"
+                              >Ange startdatum</label
+                            ></span
+                          >
+                          <input type="date" id="start-date-tab2" />
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="time-container">
+                          <!-- Flexbox för att hålla elementen i rad -->
+                          <!-- Label för starttid --><span
+                            class="tooltip"
+                            title="Ange starttid för resan"
+                          >
+                            <label for="start-time-outward">
+                              <i class="fas fa-clock"></i> Ange starttid
+                            </label>
+                          </span>
+
+                          <!-- Tid-input -->
+                          <input type="time" id="start-time-outward" />
+                          <span
+                            class="tooltip"
+                            title="Innebär att upphämtningstiden styr. Ankomsttiden kan variera beroende på till exempel trafik."
+                          >
+                            <!-- Checkbox-container för styrtid -->
+                            <div class="checkbox-container">
+                              <input
+                                type="checkbox"
+                                id="from-time-control-outward-tab2"
+                                onclick="toggleTimeControl('tab2', 'from-outward')"
+                                checked
+                              />
+                              <!-- Label + tooltip för styrtid -->
+                              <label for="from-time-control-outward-tab2">
+                                Styrtid
+                                <i class="fas fa-info-circle"></i>
+                              </label></div
+                          ></span>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Ange var du ska åka till. Detta är destinationen för resan."
+                          >
+                            <i class="fas fa-map-marker-alt"></i>
+                            <label class="section-title" for="destination1">
+                              Jag åker till</label
+                            ></span
+                          >
+                        </div>
+                        <div>
+                          <select
+                            id="destination1"
+                            onchange="toggleCustomInput('destination1', 'custom-destination1')"
+                          >
+                            <option value="">Ange ankomstadress</option>
+                            <option value="mitt-hem">Mitt hem</option>
+                            <option value="min-arbetsplats">
+                              Min arbetsplats
+                            </option>
+                            <option value="dotterns-hem" selected>
+                              Dotterns hem
+                            </option>
+                            <option value="ica">ICA</option>
+                            <option value="custom">Ange ny adress...</option>
+                          </select>
+                        </div>
+                        <input
+                          type="text"
+                          id="custom-destination1"
+                          class="custom-input"
+                          placeholder="Ange ny adress"
+                        />
+                      </div>
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj datumet då du vill vara framme"
+                          >
+                            <i class="fas fa-calendar-check"></i>
+                            <label for="end-date-tab2"
+                              >Ange slutdatum</label
+                            ></span
+                          >
+                          <input type="date" id="end-date-tab2" />
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="time-container">
+                          <!-- Tooltip för sluttid -->
+                          <span class="tooltip" title="Ange sluttid för resan">
+                            <label for="end-time-outward">
+                              <i class="fas fa-clock"></i> Ange sluttid
+                            </label>
+                          </span>
+
+                          <!-- Tid-input -->
+                          <input type="time" id="end-time-outward" />
+
+                          <span
+                            class="tooltip"
+                            title="Om du behöver vara framme en viss tid, planeras upphämtningen utifrån detta. Chauffören beräknar avgångstiden baserat på trafik och restid för att ankomsttiden ska hållas."
+                          >
+                            <!-- Checkbox-container för styrtid -->
+                            <div class="checkbox-container">
+                              <input
+                                type="checkbox"
+                                id="to-time-control-outward-tab2"
+                                onclick="toggleTimeControl('tab2', 'to-outward')"
+                              />
+                              <!-- Label + tooltip för styrtid -->
+                              <label for="to-time-control-outward-tab2">
+                                Styrtid
+                                <i class="fas fa-info-circle"></i>
+                              </label>
+                            </div>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <h3
+                      class="tooltip"
+                      title="Välj avgångsplats och destination för din resa."
+                    >
+                      Hemresa
+                    </h3>
+                    <div class="grid-two">
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Ange var du åker ifrån. Detta är startpunkten för resan."
+                          >
+                            <i class="fas fa-map-marker-alt"></i>
+                            <label class="section-title" for="departure">
+                              Jag åker från</label
+                            ></span
+                          >
+                        </div>
+                        <div>
+                          <select
+                            id="departure"
+                            onchange="toggleCustomInput('departure', 'custom-departure')"
+                          >
+                            <option value="">Ange avgångsadress</option>
+                            <option value="min-aktuella-position">
+                              Min aktuella position
+                            </option>
+                            <option value="mitt-hem">Mitt hem</option>
+                            <option value="min-arbetsplats">
+                              Min arbetsplats
+                            </option>
+                            <option value="dotterns-hem" selected>
+                              Dotterns hem
+                            </option>
+                            <option value="ica">ICA</option>
+                            <option value="custom">Ange ny adress...</option>
+                          </select>
+                        </div>
+                        <input
+                          type="text"
+                          id="custom-departure"
+                          class="custom-input"
+                          placeholder="Ange ny adress"
+                        />
+                      </div>
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj datumet då du vill resa"
+                          >
+                            <i class="fas fa-calendar-day"></i>
+                            <label for="start-date"
+                              >Ange startdatum</label
+                            ></span
+                          >
+                          <input type="date" id="start-date" />
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="time-container">
+                          <!-- Flexbox för att hålla elementen i rad -->
+                          <!-- Label för starttid --><span
+                            class="tooltip"
+                            title="Ange starttid för resan"
+                          >
+                            <label for="start-time-return">
+                              <i class="fas fa-clock"></i> Ange starttid
+                            </label>
+                          </span>
+
+                          <!-- Tid-input -->
+                          <input type="time" id="start-time-return" />
+                          <span
+                            class="tooltip"
+                            title="Innebär att upphämtningstiden styr. Ankomsttiden kan variera beroende på till exempel trafik."
+                          >
+                            <!-- Checkbox-container för styrtid -->
+                            <div class="checkbox-container">
+                              <input
+                                type="checkbox"
+                                id="from-time-control-return-tab2"
+                                onclick="toggleTimeControl('tab2', 'from-return')"
+                                checked
+                              />
+                              <!-- Label + tooltip för styrtid -->
+                              <label for="from-time-control-return-tab2">
+                                Styrtid
+                                <i class="fas fa-info-circle"></i>
+                              </label></div
+                          ></span>
+                        </div>
+                      </div>
+
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Ange var du ska åka till. Detta är destinationen för resan."
+                          >
+                            <i class="fas fa-map-marker-alt"></i>
+                            <label class="section-title" for="destination">
+                              Jag åker till</label
+                            ></span
+                          >
+                        </div>
+                        <div>
+                          <select
+                            id="destination"
+                            onchange="toggleCustomInput('destination', 'custom-destination')"
+                          >
+                            <option value="">Ange ankomstadress</option>
+                            <option value="mitt-hem" selected>Mitt hem</option>
+                            <option value="min-arbetsplats">
+                              Min arbetsplats
+                            </option>
+                            <option value="dotterns-hem">Dotterns hem</option>
+                            <option value="ica">ICA</option>
+                            <option value="custom">Ange ny adress...</option>
+                          </select>
+                        </div>
+                        <input
+                          type="text"
+                          id="custom-destination"
+                          class="custom-input"
+                          placeholder="Ange ny adress"
+                        />
+                      </div>
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj datumet då du vill vara framme"
+                          >
+                            <i class="fas fa-calendar-check"></i>
+                            <label for="end-date">Ange slutdatum</label></span
+                          >
+                          <input type="date" id="end-date" />
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="time-container">
+                          <!-- Tooltip för sluttid -->
+                          <span class="tooltip" title="Ange sluttid för resan">
+                            <label for="end-time-return">
+                              <i class="fas fa-clock"></i> Ange sluttid
+                            </label>
+                          </span>
+
+                          <!-- Tid-input -->
+                          <input type="time" id="end-time-return" />
+
+                          <span
+                            class="tooltip"
+                            title="Om du behöver vara framme en viss tid, planeras upphämtningen utifrån detta. Chauffören beräknar avgångstiden baserat på trafik och restid för att ankomsttiden ska hållas."
+                          >
+                            <!-- Checkbox-container för styrtid -->
+                            <div class="checkbox-container">
+                              <input
+                                type="checkbox"
+                                id="to-time-control-return-tab2"
+                                onclick="toggleTimeControl('tab2', 'to-return')"
+                              />
+                              <!-- Label + tooltip för styrtid -->
+                              <label for="to-time-control-return-tab2">
+                                Styrtid
+                                <i class="fas fa-info-circle"></i>
+                              </label>
+                            </div>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <h3
+                      class="tooltip"
+                      title="Välj hur ofta resan ska bokas – en gång eller som en återkommande bokning."
+                    >
+                      Bokningsfrekvens
+                    </h3>
+                    <div class="grid-three">
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj bokningsfrekvens. 'Boka endast denna resa' skapar en engångsbokning, medan 'Schemalagd bokning' upprepar resan enligt ett schema."
+                          >
+                            <i class="fas fa-sync-alt"></i>
+
+                            <label for="booking-frequency-tab2"
+                              >Frekvens</label
+                            ></span
+                          >
+                          <select
+                            id="booking-frequency-tab2"
+                            onchange="toggleRecurringBooking()"
+                          >
+                            <option value="once">Boka endast denna resa</option>
+                            <option value="recurring">
+                              Schemalagd bokning
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj hur ofta bokningen ska upprepas. Intervallet baseras på den ursprungliga bokningen. Exempel: Om du bokar 'En gång i veckan' den 1 januari, schemaläggs nästa bokning den 8 januari (1 januari + 7 dagar)."
+                          >
+                            <i class="fas fa-location-arrow"></i>
+                            <label for="interval-tab2">Intervall</label>
+                          </span>
+                          <select id="interval-tab2">
+                            <option value="">Välj intervall</option>
+                            <option value="daily">Varje dag</option>
+                            <option value="weekly" selected>
+                              En gång i veckan
+                            </option>
+                            <option value="biweekly">Varannan vecka</option>
+                            <option value="monthly">En gång i månaden</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj datum för när den återkommande bokningen ska starta."
+                          >
+                            <i class="fas fa-calendar-day"></i>
+
+                            <label for="start-date-coming-tab2"
+                              >Start återkommande bokning</label
+                            ></span
+                          >
+                          <input
+                            type="date"
+                            id="start-date-coming-tab2"
+                            class="disabled"
+                            disabled
+                          />
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div>
+                          <span
+                            class="tooltip"
+                            title="Välj datum för när den återkommande bokningen ska avslutas."
+                          >
+                            <i class="fas fa-calendar-check"></i>
+
+                            <label for="end-date-coming-tab2"
+                              >Slut återkommande bokning</label
+                            ></span
+                          >
+                          <input
+                            type="date"
+                            id="end-date-coming-tab2"
+                            class="disabled"
+                            disabled
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <h3
+                      class="tooltip"
+                      title="Här kan du ange om du behöver hjälpmedel eller särskilda behov för din resa"
+                    >
+                      Hjälpmedel och övriga behov
+                    </h3>
+                    <div class="grid-four">
+                      <div class="item">
+                        <div class="section-title">
+                          <span
+                            class="tooltip"
+                            title="Välj eventuella hjälpmedel som du behöver under resan"
+                          >
+                            <div class="section-titel">
+                              <i class="fas fa-wheelchair"></i> Hjälpmedel
+                            </div></span
+                          >
+                        </div>
+                        <div class="checkbox-group">
+                          <div class="checkbox-item">
+                            <span
+                              class="tooltip"
+                              title="Ta gärna med dig en käpp eller en krycka"
+                            >
+                              <label>
+                                <input type="checkbox" /> Käpp eller krycka
+                                <i class="fas fa-cane"></i>
+                              </label>
+                            </span>
+                          </div>
+
+                          <div class="checkbox-item">
+                            <span
+                              class="tooltip"
+                              title="Ta gärna med dig din rullator"
+                            >
+                              <label>
+                                <input type="checkbox" /> Rullator
+                                <i class="fas fa-walking"></i>
+                              </label>
+                            </span>
+                          </div>
+
+                          <div class="checkbox-item">
+                            <span
+                              class="tooltip"
+                              title="Om du tar med din rullstol bokas du automatiskt för ett specialfordon, så att rullstolen får plats."
+                            >
+                              <label for="wheelchair-tab2">
+                                <input type="checkbox" id="wheelchair-tab2" />
+                                Rullstol
+                                <i class="fas fa-wheelchair"></i>
+                              </label>
+                            </span>
+                          </div>
+
+                          <div class="checkbox-item">
+                            <span
+                              class="tooltip"
+                              title="En ledsagare eller medpassagerare får följa med"
+                            >
+                              <label>
+                                <input type="checkbox" /> Ledsagare /
+                                medpassagerare
+                                <i class="fas fa-user-friends"></i>
+                              </label>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <span
+                          class="tooltip"
+                          title="Ange övriga behov som du kan behöva under resan."
+                        >
+                          <div class="section-title">Övrigt</div></span
+                        >
+                        <div class="checkbox-group">
+                          <div class="checkbox-item">
+                            <div
+                              class="tooltip"
+                              title="Det ingår alltid att få hjälp vid på- och avstigning, dock inte till porten"
+                            >
+                              <label
+                                ><input type="checkbox" checked disabled />
+                                Hjälp vid på- och avstigning
+                                <i class="fas fa-hands-helping"></i
+                              ></label>
+                            </div>
+                          </div>
+                          <div class="checkbox-group">
+                            <div
+                              class="tooltip"
+                              title="Max 1 resväska eller 2 kassar är tillåtet"
+                            >
+                              <label
+                                ><input type="checkbox" checked disabled /> Max
+                                1 resväska eller 2 kassar
+                                <i class="fas fa-shopping-bag"></i
+                              ></label>
+                            </div>
+                          </div>
+                          <div class="checkbox-group">
+                            <div
+                              class="tooltip"
+                              title="Specialfordon bokas automatiskt om rullstol anges under hjälpmedel"
+                            >
+                              <label for="special-vehicle-tab2"
+                                ><input
+                                  type="checkbox"
+                                  id="special-vehicle-tab2"
+                                  disabled />
+                                Specialfordon <i class="fas fa-bus"></i
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="button-group">
+                      <button
+                        type="submit"
+                        class="btn login"
+                        id="book-round-trip"
+                      >
+                        Boka Tur- och Returresa
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div id="tab3" class="tab-content">
+            <h2>Flik 3: Profil</h2>
+            <p>Här kan du hantera din profil och se din information.</p>
+          </div> -->
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-section">
+          <div class="logo-container">
+            <img
+              src="src/images/fardtjanst-orebro_logo.svg"
+              alt="Färdtjänst Örebros startsida"
+              class="logo"
+            />
+          </div>
+          <h2>Färdtjänst Örebro</h2>
+          <p>@2025 Färdtjänst Örebro</p>
+          <p>Alla rättigheter förbehållna</p>
+        </div>
+        <address class="footer-section">
+          <h2>Huvudkontoret</h2>
+          <ul>
+            <li>Färdtjänstgatan 44</li>
+            <li>70321 Örebro</li>
+          </ul>
+          <h2>Epostadress</h2>
+          <ul>
+            <li><a href="mailto:info@fardtjanst.se">info@fardtjanst.se</a></li>
+          </ul>
+        </address>
+        <div class="footer-section">
+          <h2>Telefon</h2>
+          <ul>
+            <li>070-132 45 67</li>
+          </ul>
+          <div class="social-media">
+            <h2>Följ oss</h2>
+            <ul class="social-icons">
+              <li class="social-icon">
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="src/images/facebook.svg"
+                    alt="Facebook"
+                    class="normal"
+                  />
+                  <img
+                    src="src/images/facebook_hover.svg"
+                    alt="Facebook Hover"
+                    class="hover"
+                  />
+                </a>
+              </li>
+              <li class="social-icon">
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="src/images/instagram.svg"
+                    alt="Instagram"
+                    class="normal"
+                  />
+                  <img
+                    src="src/images/instagram_hover.svg"
+                    alt="Instagram Hover"
+                    class="hover"
+                  />
+                </a>
+              </li>
+              <li class="social-icon">
+                <a
+                  href="https://x.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="src/images/x.svg" alt="X" class="normal" />
+                  <img
+                    src="src/images/x_hover.svg"
+                    alt="X Hover"
+                    class="hover"
+                  />
+                </a>
+              </li>
+              <li class="social-icon">
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="src/images/linkedin.svg"
+                    alt="LinkedIn"
+                    class="normal"
+                  />
+                  <img
+                    src="src/images/linkedin_hover.svg"
+                    alt="LinkedIn Hover"
+                    class="hover"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h2>Våra riktlinjer</h2>
+          <nav aria-label="Juridiska riktlinjer">
+            <ul>
+              <li><a href="#">Integritetspolicy</a></li>
+              <li><a href="#">Cookie policy</a></li>
+              <li><a href="#">Användarvillkor</a></li>
+              <li>
+                <a href="accessibility-statement.html"
+                  >Tillgänglighetsutlåtande</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-section">
+          <h2>Navigering</h2>
+          <nav aria-label="Webbplatsnavigering">
+            <ul>
+              <li>
+                <a href="#my-trips.html"
+                  ><i class="fas fa-calendar-check"></i> Mina resor</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-file-alt"></i> Ansök</a>
+              </li>
+              <li>
+                <a href="prices-and-rules.html"
+                  ><i class="fas fa-balance-scale"></i> Priser och regler</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-users"></i> Om oss</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-envelope"></i> Kontakta oss</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <script src="scripts/my-trips.js"></script>
+  </body>
+</html>

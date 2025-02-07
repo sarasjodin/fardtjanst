@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <!--<link rel="stylesheet" href="styles/main.scss" />-->
+    <title>Startsida | Färdtjänst Örebro</title>
+    <!-- <script
+      src="https://kit.fontawesome.com/f407e26bd6.js"
+      crossorigin="anonymous"
+    ></script> -->
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Hoppa till innehåll</a>
+    <div class="container">
+      <header class="menu">
+        <a href="#index.html" class="logo-container" rel="noopener noreferrer">
+          <img
+            src="src/images/fardtjanst-orebro_logo.svg"
+            alt="Färdtjänst Örebros startsida"
+            class="logo"
+          />
+          <span class="company-name">Färdtjänst Örebro</span>
+        </a>
+        <button
+          class="hamburger-menu"
+          aria-label="Öppna meny"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" aria-label="Huvudmeny">
+          <ul class="menu-items">
+            <!-- "Boka" är tillgänglig efter inloggning -->
+            <!-- <li><a href="#">Boka</a></li> -->
+            <!-- "Ansök" är bara tillgänglig om man INTE loggat in -->
+            <li>
+              <a href="#"><i class="fas fa-file-alt"></i> Ansök</a>
+            </li>
+            <!-- "Priser och regler" är en standardsida som är tillgänglig även utan inloggning -->
+            <li>
+              <a href="prices-and-rules.html"
+                ><i class="fas fa-balance-scale"></i> Priser och regler</a
+              >
+            </li>
+            <!-- "Om oss" är en standardsida som är tillgänglig även utan inloggning -->
+            <li>
+              <a href="#"><i class="fas fa-users"></i> Om oss</a>
+            </li>
+            <!-- "Kontakta oss" är en standardsida som är tillgänglig även utan inloggning -->
+            <li>
+              <a href="#"><i class="fas fa-envelope"></i> Kontakta oss</a>
+            </li>
+            <!-- "Min profil" är tillgänglig efter inloggning -->
+            <!-- <li><a href="#my-profile">Min profil</a></li> -->
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <div class="main-container">
+            <!-- HERO SEKTION -->
+            <div class="upper">
+              <div class="left">
+                <h1>Vi hjälper dig<br />att komma dit du ska</h1>
+              </div>
+              <div class="right">
+                <div class="login-form-container">
+                  <form
+                    action="my-trips.html"
+                    class="login-form"
+                    aria-labelledby="login-title"
+                  >
+                    <h2 id="login-title">Åtkomst till mina resor</h2>
+                    <label for="userid">Användarid</label>
+                    <input
+                      type="text"
+                      id="userid"
+                      name="userid"
+                      placeholder="Ange ditt id"
+                      autocomplete="username"
+                      required
+                      aria-describedby="userid-help"
+                    />
+                    <small id="userid-help" class="visually-hidden">
+                      Ange ditt registrerade användar-ID eller
+                      epostadress</small
+                    >
+
+                    <label for="password">Lösenord</label>
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      placeholder="Ange ditt lösenord"
+                      autocomplete="current-password"
+                      required
+                      aria-describedby="password-help"
+                    />
+                    <small id="password-help" class="visually-hidden">
+                      Ditt lösenord måste vara minst 8 tecken långt</small
+                    >
+
+                    <div class="button-group">
+                      <button type="button" class="btn create-account">
+                        Skapa konto
+                      </button>
+                      <button type="submit" class="btn login">Logga in</button>
+                    </div>
+                    <div
+                      id="error-message"
+                      aria-live="assertive"
+                      class="error-message"
+                    ></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- LOWER SEKTION -->
+            <div class="lower">
+              <div class="left">
+                <h2>Ansök om färdtjänst</h2>
+                <ol>
+                  <li>
+                    <div class="sub-section">
+                      <h3>Prata med din läkare och be om läkarintyg</h3>
+                      <p>
+                        Kolla med din läkare om du kan få färdtjänst. <br />
+                        Du behöver ha svårt att resa med kollektivtrafik.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="sub-section">
+                      <h3>Skicka in ansökan till kommunen</h3>
+                      <p>
+                        Det går att ansöka via e-tjänst, telefon, vanlig post
+                        eller genom ett personligt besök.<br />Kom ihåg att
+                        bifoga läkarintyget till ansökan.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="sub-section">
+                      <h3>Vänta på besked</h3>
+                      <p>
+                        Du får ett skriftligt svar när din ansökan är klar.
+                        <br />Om du har rätt till färdtjänst, får du information
+                        om hur du kommer att kunna nyttja tjänsten.
+                      </p>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+              <div class="right">
+                <h2>5 vanliga frågor och svar</h2>
+                <div class="collapsible">
+                  <button
+                    class="collapsible-header"
+                    aria-expanded="false"
+                    aria-controls="faq1"
+                  >
+                    <span class="arrow">&#9656;</span>
+                    <h3>Hur fungerar färdtjänst?</h3>
+                  </button>
+                  <div class="collapsible-content" id="faq1">
+                    <p>
+                      Färdtjänst är en samhällsservice för personer som har
+                      svårt att resa med kollektivtrafik. Du bokar en resa i
+                      förväg och blir hämtad vid din adress.
+                    </p>
+                    <p>
+                      Resan sker med anpassade fordon och du betalar en
+                      subventionerad avgift, liknande en kollektivtrafikbiljett.
+                    </p>
+                  </div>
+                  <button
+                    class="collapsible-header"
+                    aria-expanded="false"
+                    aria-controls="faq2"
+                  >
+                    <span class="arrow">&#9656;</span>
+                    <h3>Vem kan använda färdtjänst?</h3>
+                  </button>
+                  <div class="collapsible-content" id="faq2">
+                    <p>
+                      Personer med funktionsnedsättning som gör det svårt att
+                      använda kollektivtrafik kan ansöka om färdtjänst.
+                    </p>
+                    <p>
+                      Ansökan görs via din kommun eller region och kräver ofta
+                      ett intyg från läkare eller vårdgivare.
+                    </p>
+                  </div>
+                  <button
+                    class="collapsible-header"
+                    aria-expanded="false"
+                    aria-controls="faq3"
+                  >
+                    <span class="arrow">&#9656;</span>
+                    <h3>Hur bokar jag en resa?</h3>
+                  </button>
+                  <div class="collapsible-content" id="faq3">
+                    <p>
+                      Du kan boka via telefon, webbplats eller app. Uppge
+                      adress, destination och eventuella hjälpmedel.
+                    </p>
+                    <p>
+                      Bokning bör ske i god tid för att garantera en plats, men
+                      akuta resor kan ibland ordnas.
+                    </p>
+                  </div>
+                  <button
+                    class="collapsible-header"
+                    aria-expanded="false"
+                    aria-controls="faq4"
+                  >
+                    <span class="arrow">&#9656;</span>
+                    <h3>Kan jag boka återkommande resor?</h3>
+                  </button>
+                  <div class="collapsible-content" id="faq4">
+                    <p>
+                      Ja, du kan boka stående resor för arbete, skola eller
+                      regelbundna aktiviteter.
+                    </p>
+                    <p>
+                      Detta görs via kundtjänst eller appen, där du kan ange
+                      tider och dagar i förväg.
+                    </p>
+                  </div>
+                  <button
+                    class="collapsible-header"
+                    aria-expanded="false"
+                    aria-controls="faq5"
+                  >
+                    <span class="arrow">&#9656;</span>
+                    <h3>Hur får jag rätt fordon?</h3>
+                  </button>
+                  <div class="collapsible-content" id="faq5">
+                    <p>
+                      Vid bokning anger du behov av att färdas med rullstol.
+                    </p>
+                    <p>
+                      Systemet matchar sedan din resa med ett lämpligt fordon.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-section">
+          <div class="logo-container">
+            <img
+              src="src/images/fardtjanst-orebro_logo.svg"
+              alt="Färdtjänst Örebros startsida"
+              class="logo"
+            />
+          </div>
+          <h2>Färdtjänst Örebro</h2>
+          <p>@2025 Färdtjänst Örebro</p>
+          <p>Alla rättigheter förbehållna</p>
+        </div>
+        <address class="footer-section">
+          <h2>Huvudkontoret</h2>
+          <ul>
+            <li>Färdtjänstgatan 44</li>
+            <li>70321 Örebro</li>
+          </ul>
+          <h2>Epostadress</h2>
+          <ul>
+            <li><a href="mailto:info@fardtjanst.se">info@fardtjanst.se</a></li>
+          </ul>
+        </address>
+        <div class="footer-section">
+          <h2>Telefon</h2>
+          <ul>
+            <li>070-132 45 67</li>
+          </ul>
+          <div class="social-media">
+            <h2>Följ oss</h2>
+            <ul class="social-icons">
+              <li class="social-icon">
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="src/images/facebook.svg"
+                    alt="Facebook"
+                    class="normal"
+                  />
+                  <img
+                    src="src/images/facebook_hover.svg"
+                    alt="Facebook Hover"
+                    class="hover"
+                  />
+                </a>
+              </li>
+              <li class="social-icon">
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="src/images/instagram.svg"
+                    alt="Instagram"
+                    class="normal"
+                  />
+                  <img
+                    src="src/images/instagram_hover.svg"
+                    alt="Instagram Hover"
+                    class="hover"
+                  />
+                </a>
+              </li>
+              <li class="social-icon">
+                <a
+                  href="https://x.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="src/images/x.svg" alt="X" class="normal" />
+                  <img
+                    src="src/images/x_hover.svg"
+                    alt="X Hover"
+                    class="hover"
+                  />
+                </a>
+              </li>
+              <li class="social-icon">
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="src/images/linkedin.svg"
+                    alt="LinkedIn"
+                    class="normal"
+                  />
+                  <img
+                    src="src/images/linkedin_hover.svg"
+                    alt="LinkedIn Hover"
+                    class="hover"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h2>Våra riktlinjer</h2>
+          <nav aria-label="Juridiska riktlinjer">
+            <ul>
+              <li><a href="#">Integritetspolicy</a></li>
+              <li><a href="#">Cookie policy</a></li>
+              <li><a href="#">Användarvillkor</a></li>
+              <li>
+                <a href="accessibility-statement.html"
+                  >Tillgänglighetsutlåtande</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-section">
+          <h2>Navigering</h2>
+          <nav aria-label="Webbplatsnavigering">
+            <ul>
+              <li>
+                <a href="#"><i class="fas fa-file-alt"></i> Ansök</a>
+              </li>
+              <li>
+                <a href="prices-and-rules.html"
+                  ><i class="fas fa-balance-scale"></i> Priser och regler</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-users"></i> Om oss</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-envelope"></i> Kontakta oss</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,554 @@
+/* Grundläggande reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 0 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 120%;
+}
+
+.logo {
+  min-height: 60px;
+  max-width: 150px;
+  width: auto;
+  margin-right: 2%;
+  padding-bottom: 0.5rem;
+}
+
+.company-name {
+  display: none;
+}
+
+.company-name {
+  color: white; /* Anpassa färgen efter din design */
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.company-name:hover {
+  background-color: #555;
+}
+
+.company-name:active {
+  background-color: rgba(0, 208, 212, 0.5);
+  border-radius: 8px;
+}
+
+.nav {
+  display: none;
+  flex-direction: column;
+  background-color: #333;
+  position: absolute;
+  top: 70px; /* Positionera menyn i övre högra hörnet */
+  right: 20px; /* Litet mellanrum från högra kanten */
+  width: 70%;
+  text-align: left; /* Justera texten till vänster */
+  border-radius: 5px; /* Lägg till en mjukare stil */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Förhöjd stil */
+  z-index: 1000;
+}
+
+.nav.active {
+  display: flex;
+}
+
+.menu-items {
+  list-style: none;
+  padding: 5% 10%;
+  display: flex; /* Lägger till flex för horisontell layout */
+  flex-direction: column; /* Standard layout för mobiler */
+  z-index: 1000;
+}
+
+.menu-items li {
+  margin: 0.6rem;
+  position: relative;
+  padding-left: 0.3rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  display: inline-block;
+  padding: 0.5rem;
+  background-clip: padding-box; /* Säkerställer att bakgrunden inte expanderar */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+  background-color: #555;
+  border-radius: 8px;
+}
+
+.menu-items a:active {
+  background-color: rgba(0, 208, 212, 0.5);
+  border-radius: 8px;
+}
+
+/* För att dropdownmenyn ska visas som en undermeny */
+.dropdown-menu {
+  display: none;
+  position: static;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 3%;
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  color: lightgray;
+}
+
+.nav .dropdown-menu {
+  z-index: 10; /* Se till att dropdownen visas ovanför allt annat */
+}
+
+.nav .dropdown:hover .dropdown-menu {
+  display: block; /* För desktop */
+}
+
+.menu-items li.dropdown > a .arrow {
+  display: inline-block;
+  content: '';
+  /* width: 0;
+  height: 0; */
+  margin-right: 8px; /* Avstånd mellan pil och text */
+  border-style: solid;
+  border: 6px solid #ffffff;
+  border-color: transparent transparent transparent white; /* Pilar pekar åt höger */
+  transform: rotate(0deg); /* Standard, pekar åt höger */
+  transition: transform 0.3s ease; /* Mjuk övergång vid öppning/stängning */
+  z-index: 1000;
+}
+
+/* När dropdownmenyn är aktiv, peka pilen nedåt */
+.menu-items li.dropdown.open > a .arrow {
+  transform: rotate(90deg); /* Rotera för att peka nedåt */
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 3px;
+  background-color: white;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  /* min-height: 100vh; */ /* Tillåter scrollning om innehållet är längre */
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Grundläggande styling för footern */
+
+.footer-section li,
+.footer-section p {
+  margin: 5px 0;
+  padding: 0.3rem;
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+
+.footer-section a {
+  font-size: 1.3rem;
+  padding: 0.3rem;
+  line-height: 1;
+}
+
+.footer {
+  display: grid;
+  gap: 20px;
+  background-color: #333;
+  color: white;
+  padding: 40px 0 40px 50px;
+  text-align: left;
+  width: 100%;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.footer a:hover {
+  background-color: #555;
+}
+
+address {
+  font-style: normal;
+}
+
+.footer a:active {
+  background-color: rgba(0, 208, 212, 0.5);
+  border-radius: 8px;
+}
+
+.footer .social-icons a {
+  padding: 0.75rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column; /* Standard vertikal layout */
+}
+
+.footer-section h2 {
+  margin: 15px 0 5px 0;
+  color: #b6b6b6;
+  font-size: 1.6rem;
+}
+
+div.footer-section:nth-child(2) > h2:nth-child(4),
+.social-media {
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex; /* Låter ikonerna visas horisontellt */
+  gap: 10px; /* Avstånd mellan ikoner */
+}
+
+.social-icon {
+  position: relative;
+  width: 24px; /* Anpassa till befintlig storlek */
+  height: 24px; /* Anpassa till befintlig storlek */
+}
+.social-icon .larger {
+  position: relative;
+  width: 28px; /* Anpassa till befintlig storlek */
+  height: 28px; /* Anpassa till befintlig storlek */
+}
+.social-icon .largest {
+  position: relative;
+  width: 35px; /* Anpassa till befintlig storlek */
+  height: 35px; /* Anpassa till befintlig storlek */
+}
+
+.social-icon img {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+  width: 100%; /* Fyller förälderns bredd */
+  height: 100%; /* Fyller förälderns höjd */
+  object-fit: contain; /* Håller proportionerna */
+  transition: opacity 0.3s ease;
+}
+
+.social-icon img.hover {
+  opacity: 0; /* Dölj hover-bilden som standard */
+}
+
+.social-icon:hover img.hover {
+  opacity: 1; /* Visa hover-bilden vid hover */
+}
+
+.social-icon:hover img.normal {
+  opacity: 0; /* Dölj normal-bilden vid hover */
+}
+
+.footer .social-icons a:hover {
+  background-color: rgba(255, 255, 255, 1); /* Ren vit vid hover */
+}
+
+.footer .social-icons a:active {
+  background-color: rgb(0, 208, 212); /* Ren vit vid hover */
+}
+
+/* Mobile-first (max-width: 480px) */
+.footer {
+  grid-template-columns: 1fr; /* 1 kolumn */
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+i.fas {
+  color: rgb(0, 208, 212);
+  padding-right: 0.3rem;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #008080;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 10px;
+}
+
+.btn:focus {
+  outline: 3px solid #008080;
+  background-color: #e0e0e0;
+}
+
+@media (min-width: 480px) and (max-width: 600px) {
+  .nav {
+    width: 100%;
+  }
+
+  img.logo {
+    max-width: 150px;
+    padding-bottom: 0.5rem;
+  }
+
+  .logo-container {
+    width: 100%;
+  }
+
+  .company-name {
+    display: inline-block;
+    width: auto;
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+  .footer {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolumner */
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1025px) {
+  .nav {
+    width: 40%;
+  }
+
+  .company-name {
+    display: inline-block;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .footer {
+    grid-template-columns: repeat(3, 1fr); /* 2 kolumner */
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .nav {
+    display: flex;
+    flex-direction: row; /* Gör menyn horisontell */
+    position: static;
+    box-shadow: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu-items {
+    flex-direction: row; /* Gör länkar horisontella */
+    padding: 0;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .menu-items .dropdown-menu {
+    background-color: rgb(68, 68, 68);
+    z-index: 1000;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-items a {
+    font-size: 17px;
+  }
+
+  .logo-container {
+    max-width: 345px;
+  }
+
+  .company-name {
+    display: inline-block;
+    max-width: 125px;
+    font-size: 21px;
+    font-weight: bold;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .footer {
+    grid-template-columns: repeat(5, 1fr); /* 3 kolumner */
+  }
+}
+
+/* Larger screens */
+@media (min-width: 1440px) and (max-width: 1600px) {
+  .nav {
+    display: flex;
+    flex-direction: row; /* Gör menyn horisontell */
+    position: static;
+    box-shadow: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu-items {
+    flex-direction: row; /* Gör länkar horisontella */
+    padding: 0;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .menu-items a {
+    font-size: 20px;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .menu-items .dropdown-menu {
+    background-color: rgb(68, 68, 68);
+    z-index: 1000;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo-container {
+    max-width: 335px;
+  }
+
+  .company-name {
+    display: inline-block;
+    max-width: 130px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .footer {
+    grid-template-columns: repeat(5, 1fr); /* 5 kolumner */
+  }
+}
+
+/* Max 1600px */
+@media (min-width: 1600px) {
+  .menu {
+    /* Anpassa efter ditt formulärs container */
+    max-width: 1600px; /* Säkerställer att den inte blir för bred */
+    margin: 0 auto; /* Centrerar formuläret utan att ändra storlek */
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row; /* Gör menyn horisontell */
+    position: static;
+    box-shadow: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu-items {
+    flex-direction: row; /* Gör länkar horisontella */
+    padding: 0;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .menu-items a {
+    font-size: 20px;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .menu-items .dropdown-menu {
+    background-color: rgb(68, 68, 68);
+    z-index: 1000;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo-container {
+    max-width: 335px;
+  }
+
+  .company-name {
+    display: inline-block;
+    max-width: 130px;
+    font-size: 23px;
+    font-weight: bold;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  footer {
+    max-width: 1600px; /* Säkerställer att den inte blir för bred */
+    margin: 0 auto; /* Centrerar formuläret utan att ändra storlek */
+  }
+  .footer {
+    grid-template-columns: repeat(5, 1fr); /* 5 kolumner */
+  }
+}

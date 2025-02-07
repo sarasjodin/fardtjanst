@@ -1,0 +1,764 @@
+/* CSS Grid - Mobil-först */
+.main-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr; /* 1 kolumn */
+  grid-template-rows: auto auto auto auto; /* Fyra rader */
+  z-index: 1;
+}
+
+section {
+  padding: 0;
+}
+
+.upper h1 {
+  text-align: left;
+  font-size: 1.9rem;
+  color: #ffffff;
+  max-width: 100%;
+  z-index: 20;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+.upper .left {
+  align-items: first baseline;
+}
+
+.upper {
+  position: relative; /* Viktigt för att placera overlay korrekt */
+  background-image: url('../src/images/woman_in_wheel-chair.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column; /* Knappar i en kolumn på mobil */
+  padding: 20px;
+}
+
+/* Skapa en transparent film (overlay) över bilden */
+.upper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6); /* Vit transparent overlay */
+  z-index: 1;
+}
+
+.lower .left,
+.lower .right {
+  padding: 30px;
+}
+
+.lower .left ol {
+  padding-top: 30px;
+}
+
+.lower .left li {
+  line-height: 1.3;
+}
+
+.lower .left .sub-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  height: auto;
+  width: fit-content;
+  padding: 15px 30px;
+  color: black;
+  margin: 0 0 30px 0;
+}
+
+.lower .left h3 {
+  padding: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.lower p {
+  font-size: 1.1rem;
+  padding: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.lower ol {
+  list-style-type: none; /* Tar bort standardnumrering */
+  counter-reset: list-counter; /* Startar räknaren */
+}
+
+.lower ol li {
+  counter-increment: list-counter; /* Ökar räknaren */
+  position: relative;
+  padding-left: 50px; /* Skapar utrymme för numreringen */
+}
+
+.lower ol li::before {
+  content: counter(list-counter) ' '; /* Visar siffror utan punkt */
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  font-size: 2rem;
+  top: 50%; /* Centrera relativt till föräldern */
+  transform: translateY(-50%); /* Justera exakt mittpunkten */
+}
+
+form {
+  margin-right: 20px;
+  z-index: 20;
+}
+
+.login-form-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+/* Login-formuläret */
+.login-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 350px;
+}
+
+/* Input-fält */
+.login-form label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Knappar */
+.button-group {
+  display: flex;
+  flex-direction: column; /* Knappar i en kolumn på mobil */
+  gap: 10px;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Skapa konto-knapp */
+.create-account {
+  background: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.create-account:hover {
+  background: black;
+  color: white;
+}
+
+/* Logga in-knapp */
+.login {
+  background: #008080; /* Blågrön */
+  color: white;
+  border: none;
+}
+
+.login:hover {
+  background: #005f5f;
+}
+
+.lower .left {
+  background: #008080; /* Blågrön */
+  color: white;
+}
+
+.lower .right {
+  background: white;
+}
+
+.lower {
+  display: grid;
+  grid-template-columns: 1fr; /* 🔹 1 kolumn i mobil */
+  grid-template-rows: auto auto; /* 🔹 Två rader */
+  gap: 0;
+  min-height: 450px;
+}
+
+.collapsible {
+  width: 100%;
+  margin: 10px auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.collapsible-header {
+  width: 100%;
+  background-color: white;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px; /* Avstånd mellan pil och text */
+  align-items: center;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Lägg till fokusläge för tangentbordsanvändare */
+.collapsible-header:focus {
+  outline: 3px solid #008080;
+  background-color: #f0f0f0;
+}
+
+.collapsible-header:hover {
+  background-color: #e0e0e0;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  color: darkgray;
+  font-size: 2.5rem;
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, visibility 0.3s;
+  visibility: hidden;
+  padding: 0 12px;
+  background-color: white;
+}
+
+.collapsible-content.active {
+  max-height: 500px; /* Anpassa vid behov */
+  visibility: visible;
+  padding: 12px;
+}
+
+/* När aktiv: pilen roterar */
+.collapsible-header.active .arrow {
+  transform: rotate(90deg);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Tablets */
+@media (min-width: 480px) and (max-width: 1025px) {
+  .login-form-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  form {
+    margin: 0;
+    z-index: 20;
+  }
+
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .login-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    text-align: center;
+    z-index: 10;
+  }
+
+  label {
+    font-size: 1.3rem;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: row; /*Knappar i en kolumn på mobil */
+    gap: 10px;
+    align-items: center;
+    justify-content: right; /* Centrerar knapparna horisontellt */
+  }
+
+  .button-group button.btn:nth-child(1),
+  .button-group button.btn:nth-child(2) {
+    min-width: 135px;
+    align-items: center;
+  }
+
+  .btn {
+    padding: 8px 10px;
+    font-size: 1.1rem;
+  }
+
+  input#userid::placeholder,
+  input#password::placeholder {
+    font-size: 1.2rem;
+  }
+
+  .upper {
+    flex-direction: row;
+  }
+
+  /* Vänster och höger sektioner i `.upper` */
+  .upper .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2; /* Säkerställer att texten syns över overlay */
+    width: 100%;
+  }
+
+  .upper h1 {
+    text-align: left;
+    font-size: 2rem;
+    color: #ffffff;
+    max-width: 100%;
+    z-index: 20;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  }
+
+  .upper .right {
+    display: flex;
+    z-index: 2;
+  }
+
+  .lower .left,
+  .lower .right {
+    padding: 40px;
+    height: auto;
+  }
+
+  .lower h2 {
+    max-width: 100%;
+  }
+
+  .lower .right h2 {
+    text-align: center;
+  }
+
+  .lower .left ol {
+    width: auto;
+  }
+
+  .lower ol li:nth-child(1) {
+    margin-left: 0px;
+  }
+
+  .lower ol li:nth-child(2) {
+    margin-left: 60px;
+  }
+
+  .lower ol li:nth-child(3) {
+    margin-left: 100px;
+  }
+}
+
+/* Laptops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2/3 left, 1/3 right */
+    grid-template-rows: auto auto;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .login-form-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  form {
+    margin: 0;
+    z-index: 20;
+  }
+
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  label {
+    font-size: 1.3rem;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: row; /*Knappar i en kolumn på mobil */
+    gap: 10px;
+    align-items: center;
+    justify-content: right; /* Centrerar knapparna horisontellt */
+  }
+
+  .button-group button.btn:nth-child(1),
+  .button-group button.btn:nth-child(2) {
+    min-width: 135px;
+    align-items: center;
+  }
+
+  .btn {
+    padding: 8px 10px;
+    font-size: 1.1rem;
+  }
+
+  input#userid::placeholder,
+  input#password::placeholder {
+    font-size: 1.2rem;
+  }
+
+  .upper {
+    grid-column: 1 / -1; /* Sträcker sig över hela bredden */
+    grid-row: 1; /* Första raden */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px;
+  }
+
+  .lower {
+    grid-column: 1 / -1; /* Sträcker sig över hela bredden */
+    grid-row: 2; /* Andra raden */
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2/3 left, 1/3 right */
+    gap: 0px;
+    flex-direction: row;
+    min-height: 550px;
+    grid-template-rows: auto;
+  }
+
+  /* Vänster och höger sektioner i upper och lower*/
+  .upper .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2; /* Säkerställer att texten syns över overlay */
+    width: 100%;
+  }
+
+  .upper h1 {
+    text-align: left;
+    font-size: 2rem;
+    color: #ffffff;
+    max-width: 100%;
+    z-index: 20;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  }
+
+  .lower .left {
+    background-color: #008080; /* Exempel: turkos bakgrund */
+    padding: 60px;
+    color: white; /* Gör texten vit så att den syns bättre */
+  }
+
+  .lower .right {
+    background-color: white; /* Exempel: vit bakgrund */
+    padding: 40px;
+  }
+
+  .sub-section {
+    min-width: 400px;
+  }
+
+  .lower ol li:nth-child(1) {
+    margin-left: 0px;
+  }
+
+  .lower ol li:nth-child(2) {
+    margin-left: 60px;
+  }
+
+  .lower ol li:nth-child(3) {
+    margin-left: 100px;
+  }
+
+  .lower .left ol {
+    width: auto;
+    padding-right: 20px;
+  }
+}
+
+/* Larger screens */
+@media (min-width: 1440px) and (max-width: 1600px) {
+  .main-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 2fr; /* 2/3 vänster, 1/3 höger */
+    grid-template-rows: 1fr 1fr; /* Två rader */
+  }
+
+  .login-form-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  form {
+    margin: 0;
+    z-index: 20;
+  }
+
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  label {
+    font-size: 1.3rem;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: row; /*Knappar i en kolumn på mobil */
+    gap: 10px;
+    align-items: center;
+    justify-content: right; /* Centrerar knapparna horisontellt */
+  }
+
+  .button-group button.btn:nth-child(1),
+  .button-group button.btn:nth-child(2) {
+    min-width: 135px;
+    align-items: center;
+  }
+
+  .btn {
+    padding: 8px 10px;
+    font-size: 1.1rem;
+  }
+
+  input#userid::placeholder,
+  input#password::placeholder {
+    font-size: 1.2rem;
+  }
+
+  .upper {
+    grid-column: 1 / -1; /* Sträcker sig över hela bredden */
+    grid-row: 1; /* Första raden */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 80px;
+    height: unset;
+  }
+
+  .lower {
+    grid-column: 1 / -1; /* Sträcker sig över hela bredden */
+    grid-row: 2; /* Andra raden */
+    display: grid;
+    grid-template-columns: 3fr 2fr; /* 2/3 left, 1/3 right */
+    gap: 0px;
+    flex-direction: row;
+    min-height: 550px;
+    grid-template-rows: auto;
+  }
+
+  /* Vänster och höger sektioner i upper och lower*/
+  .upper .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2; /* Säkerställer att texten syns över overlay */
+    width: 100%;
+  }
+
+  .upper h1 {
+    text-align: left;
+    font-size: 2rem;
+    color: #ffffff;
+    max-width: 100%;
+    z-index: 20;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  }
+
+  .lower .left {
+    background-color: #008080; /* Exempel: turkos bakgrund */
+    padding: 80px;
+    color: white; /* Gör texten vit så att den syns bättre */
+  }
+
+  .lower .right {
+    background-color: white; /* Exempel: vit bakgrund */
+    padding: 80px;
+  }
+  .lower ol li:nth-child(1) {
+    margin-left: 0px;
+  }
+
+  .lower ol li:nth-child(2) {
+    margin-left: 20px;
+  }
+
+  .lower ol li:nth-child(3) {
+    margin-left: 40px;
+  }
+
+  .lower .left ol {
+    width: auto;
+    padding-right: 20px;
+  }
+}
+
+/* Max 1600px */
+@media (min-width: 1600px) {
+  main {
+    max-width: 1600px; /* Säkerställer att den inte blir för bred */
+    margin: 0 auto; /* Centrerar formuläret utan att ändra storlek */
+  }
+
+  .main-container {
+    max-width: 100%;
+    grid-template-columns: 2fr 1fr; /* 2/3 vänster, 1/3 höger */
+    grid-template-rows: 1fr 1fr; /* Två rader */
+  }
+
+  .login-form-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  form {
+    margin: 0;
+    z-index: 20;
+  }
+
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  label {
+    font-size: 1.3rem;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: row; /*Knappar i en kolumn på mobil */
+    gap: 10px;
+    align-items: center;
+    justify-content: right; /* Centrerar knapparna horisontellt */
+  }
+
+  .button-group button.btn:nth-child(1),
+  .button-group button.btn:nth-child(2) {
+    min-width: 135px;
+    align-items: center;
+  }
+
+  .btn {
+    padding: 8px 10px;
+    font-size: 1.1rem;
+  }
+
+  input#userid::placeholder,
+  input#password::placeholder {
+    font-size: 1.2rem;
+  }
+
+  .upper {
+    grid-column: 1 / -1; /* Sträcker sig över hela bredden */
+    grid-row: 1; /* Första raden */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 80px;
+    height: unset;
+  }
+
+  .lower {
+    grid-column: 1 / -1; /* Sträcker sig över hela bredden */
+    grid-row: 2; /* Andra raden */
+    display: grid;
+    grid-template-columns: 3fr 2fr; /* 2/3 left, 1/3 right */
+    gap: 0px;
+    flex-direction: row;
+    min-height: 550px;
+    grid-template-rows: auto;
+  }
+
+  /* Vänster och höger sektioner i upper och lower*/
+  .upper .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2; /* Säkerställer att texten syns över overlay */
+    width: 100%;
+  }
+
+  .upper h1 {
+    text-align: left;
+    font-size: 2rem;
+    color: #ffffff;
+    max-width: 100%;
+    z-index: 20;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  }
+
+  .lower .left {
+    background-color: #008080;
+    padding: 80px;
+  }
+
+  .lower .right {
+    background-color: white;
+    padding: 80px;
+  }
+  .lower ol li:nth-child(1) {
+    margin-left: 0px;
+  }
+
+  .lower ol li:nth-child(2) {
+    margin-left: 20px;
+  }
+
+  .lower ol li:nth-child(3) {
+    margin-left: 40px;
+  }
+}
