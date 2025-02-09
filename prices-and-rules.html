@@ -18,11 +18,22 @@
     <div class="container">
       <header class="menu">
         <a href="index.html" class="logo-container" rel="noopener noreferrer">
-          <img
-            src="src/images/fardtjanst-orebro_logo.svg"
-            alt="Färdtjänst Örebros startsida"
-            class="logo"
-          />
+          <picture>
+            <!-- Standard SVG-logga -->
+            <source
+              srcset="src/images/fardtjanst-orebro_logo.svg"
+              type="image/svg+xml"
+            />
+
+            <!-- Fallback om SVG inte stöds -->
+            <img
+              src="src/images/fardtjanst-orebro_logo.png"
+              alt="Färdtjänst Örebro - Till startsidan"
+              width="150"
+              height="110"
+              class="logo"
+            />
+          </picture>
           <span class="company-name">Färdtjänst Örebro</span>
         </a>
         <button
@@ -213,11 +224,23 @@
       <footer class="footer">
         <div class="footer-section">
           <div class="logo-container">
-            <img
-              src="src/images/fardtjanst-orebro_logo.svg"
-              alt="Färdtjänst Örebros startsida"
-              class="logo"
-            />
+            <picture>
+              <!-- Standard SVG-logga -->
+              <source
+                srcset="src/images/fardtjanst-orebro_logo.svg"
+                type="image/svg+xml"
+              />
+
+              <!-- Fallback om SVG inte stöds -->
+              <img
+                src="src/images/fardtjanst-orebro_logo.png"
+                alt="Färdtjänst Örebro - Till startsidan"
+                width="150"
+                height="110"
+                loading="lazy"
+                class="logo"
+              />
+            </picture>
           </div>
           <h2>Färdtjänst Örebro</h2>
           <p>@2025 Färdtjänst Örebro</p>
@@ -262,6 +285,7 @@
                     src="src/images/facebook.svg"
                     alt="Facebook"
                     class="normal"
+                    loading="lazy"
                   />
                   <img
                     src="src/images/facebook_hover.svg"
@@ -280,11 +304,13 @@
                     src="src/images/instagram.svg"
                     alt="Instagram"
                     class="normal"
+                    loading="lazy"
                   />
                   <img
                     src="src/images/instagram_hover.svg"
                     alt="Instagram Hover"
                     class="hover"
+                    loading="lazy"
                   />
                 </a>
               </li>
@@ -299,6 +325,7 @@
                     src="src/images/x_hover.svg"
                     alt="X Hover"
                     class="hover"
+                    loading="lazy"
                   />
                 </a>
               </li>
@@ -312,11 +339,13 @@
                     src="src/images/linkedin.svg"
                     alt="LinkedIn"
                     class="normal"
+                    loading="lazy"
                   />
                   <img
                     src="src/images/linkedin_hover.svg"
                     alt="LinkedIn Hover"
                     class="hover"
+                    loading="lazy"
                   />
                 </a>
               </li>
