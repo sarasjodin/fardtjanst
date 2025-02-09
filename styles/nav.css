@@ -67,11 +67,12 @@
   text-align: left; /* Justera texten till vänster */
   border-radius: 5px; /* Lägg till en mjukare stil */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Förhöjd stil */
-  z-index: 1000;
+  z-index: 999;
 }
 
 .nav.active {
   display: flex;
+  z-index: 998;
 }
 
 .menu-items {
