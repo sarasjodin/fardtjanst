@@ -89,7 +89,7 @@ section {
 }
 
 .price-table thead {
-  background-color: rgba(0, 128, 128, 0.7);
+  background-color: #095c5c;
   color: white;
   font-weight: bold;
 }
