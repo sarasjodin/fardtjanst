@@ -171,12 +171,13 @@
                 aria-selected="true"
                 onclick="openTab(event, 'tab1')"
               >
-                <span
+                <div
                   class="tooltip"
                   title="Välj denna flik för att boka en enkelresa"
-                  ><i class="fas fa-home"></i>
-                  <span class="h2-style">Enkel resa</span></span
                 >
+                  <i class="fas fa-home"></i>
+                  <span class="h2-style">Enkel resa</span>
+                </div>
               </button>
               <button
                 class="tab"
@@ -186,12 +187,13 @@
                 aria-selected="false"
                 onclick="openTab(event, 'tab2')"
               >
-                <span
+                <div
                   class="tooltip"
                   title="Välj denna flik för att boka en Tur- och returresa"
-                  ><i class="fas fa-car"></i>
-                  <span class="h2-style">Tur och retur</span></span
                 >
+                  <i class="fas fa-car"></i>
+                  <span class="h2-style">Tur och retur</span>
+                </div>
               </button>
               <!-- <button class="tab" onclick="openTab(event, 'tab3')">
                 <i class="fas fa-user"></i> Flik 3
@@ -218,15 +220,15 @@
                     <div class="grid-one">
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Ange ett namn för bokningen, t.ex. 'Hem till mamma' eller 'Handla på Coop'."
                           >
                             <label class="section-title" for="booking-name"
                               ><i class="fas fa-pencil-alt"></i> Namnge ny
                               bokning</label
-                            ></span
-                          >
+                            >
+                          </div>
                           <input
                             type="text"
                             id="booking-name"
@@ -237,20 +239,21 @@
                         </div>
                       </div>
                       <div class="item">
-                        <span
+                        <div
                           class="tooltip"
                           title="Välj detta alternativ för att automatiskt fylla i din senaste bokning."
                         >
                           <label for="last-booking" class="section-title">
                             <i class="fas fa-sync-alt"></i>
                             Återanvänd min senaste bokning</label
-                          ></span
-                        ><br />
+                          >
+                        </div>
+                        <br />
                         <input type="checkbox" id="last-booking" checked />
                       </div>
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj detta alternativ för att automatiskt fylla i från tidigare bokningar."
                           >
@@ -263,8 +266,8 @@
                                 title="Välj en tidigare bokning att återanvända"
                               ></i>
                               Återanvänd en tidigare bokning
-                            </label></span
-                          >
+                            </label>
+                          </div>
 
                           <div class="dropdown-container">
                             <select id="important-bookings">
@@ -292,15 +295,15 @@
                     <div class="grid-two">
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Ange var du åker ifrån. Detta är startpunkten för resan."
                           >
                             <i class="fas fa-map-marker-alt"></i>
                             <label class="section-title" for="departure2">
                               Jag åker från</label
-                            ></span
-                          >
+                            >
+                          </div>
                         </div>
                         <div>
                           <select
@@ -329,33 +332,29 @@
                       </div>
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj datumet då du vill resa"
                           >
                             <i class="fas fa-calendar-day"></i>
-                            <label for="start-date-tab1"
-                              >Ange startdatum</label
-                            ></span
-                          >
+                            <label for="start-date-tab1">Ange startdatum</label>
+                          </div>
                           <input type="date" id="start-date-tab1" />
                         </div>
                       </div>
                       <div class="item">
                         <div class="time-container">
                           <!-- Flexbox för att hålla elementen i rad -->
-                          <!-- Label för starttid --><span
-                            class="tooltip"
-                            title="Ange starttid för resan"
-                          >
+                          <!-- Label för starttid -->
+                          <div class="tooltip" title="Ange starttid för resan">
                             <label for="start-time-tab1">
                               <i class="fas fa-clock"></i> Ange starttid
                             </label>
-                          </span>
+                          </div>
 
                           <!-- Tid-input -->
                           <input type="time" id="start-time-tab1" />
-                          <span
+                          <div
                             class="tooltip"
                             title="Innebär att upphämtningstiden styr. Ankomsttiden kan variera beroende på till exempel trafik."
                           >
@@ -371,22 +370,23 @@
                               <label for="from-time-control-tab1">
                                 Styrtid
                                 <i class="fas fa-info-circle"></i>
-                              </label></div
-                          ></span>
+                              </label>
+                            </div>
+                          </div>
                         </div>
                       </div>
 
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Ange var du ska åka till. Detta är destinationen för resan."
                           >
                             <i class="fas fa-map-marker-alt"></i>
                             <label class="section-title" for="destination2">
                               Jag åker till</label
-                            ></span
-                          >
+                            >
+                          </div>
                         </div>
                         <div>
                           <select
@@ -414,31 +414,29 @@
                       </div>
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj datumet då du vill vara framme"
                           >
                             <i class="fas fa-calendar-check"></i>
-                            <label for="end-date-tab1"
-                              >Ange slutdatum</label
-                            ></span
-                          >
+                            <label for="end-date-tab1">Ange slutdatum</label>
+                          </div>
                           <input type="date" id="end-date-tab1" />
                         </div>
                       </div>
                       <div class="item">
                         <div class="time-container">
                           <!-- Tooltip för sluttid -->
-                          <span class="tooltip" title="Ange sluttid för resan">
+                          <div class="tooltip" title="Ange sluttid för resan">
                             <label for="end-time-tab1">
                               <i class="fas fa-clock"></i> Ange sluttid
                             </label>
-                          </span>
+                          </div>
 
                           <!-- Tid-input -->
                           <input type="time" id="end-time-tab1" />
 
-                          <span
+                          <div
                             class="tooltip"
                             title="Om du behöver vara framme en viss tid, planeras upphämtningen utifrån detta. Chauffören beräknar avgångstiden baserat på trafik och restid för att ankomsttiden ska hållas."
                           >
@@ -455,7 +453,7 @@
                                 <i class="fas fa-info-circle"></i>
                               </label>
                             </div>
-                          </span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -468,16 +466,14 @@
                     <div class="grid-three">
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj bokningsfrekvens. 'Boka endast denna resa' skapar en engångsbokning, medan 'Schemalagd bokning' upprepar resan enligt ett schema."
                           >
                             <i class="fas fa-sync-alt"></i>
 
-                            <label for="booking-frequency-tab1"
-                              >Frekvens</label
-                            ></span
-                          >
+                            <label for="booking-frequency-tab1">Frekvens</label>
+                          </div>
                           <select
                             id="booking-frequency-tab1"
                             onchange="toggleRecurringBooking()"
@@ -491,13 +487,13 @@
                       </div>
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj hur ofta bokningen ska upprepas. Intervallet baseras på den ursprungliga bokningen. Exempel: Om du bokar 'En gång i veckan' den 1 januari, schemaläggs nästa bokning den 8 januari (1 januari + 7 dagar)."
                           >
                             <i class="fas fa-location-arrow"></i>
                             <label for="interval-tab1">Intervall</label>
-                          </span>
+                          </div>
                           <select id="interval-tab1">
                             <option value="">Välj intervall</option>
                             <option value="daily">Varje dag</option>
@@ -511,7 +507,7 @@
                       </div>
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj datum för när den återkommande bokningen ska starta."
                           >
@@ -519,8 +515,8 @@
 
                             <label for="start-date-coming-tab1"
                               >Start återkommande bokning</label
-                            ></span
-                          >
+                            >
+                          </div>
                           <input
                             type="date"
                             id="start-date-coming-tab1"
@@ -531,7 +527,7 @@
                       </div>
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj datum för när den återkommande bokningen ska avslutas."
                           >
@@ -539,8 +535,8 @@
 
                             <label for="end-date-coming-tab1"
                               >Slut återkommande bokning</label
-                            ></span
-                          >
+                            >
+                          </div>
                           <input
                             type="date"
                             id="end-date-coming-tab1"
@@ -621,12 +617,12 @@
                         </div>
                       </div>
                       <div class="item">
-                        <span
+                        <div
                           class="tooltip"
                           title="Ange övriga behov som du kan behöva under resan."
                         >
-                          <div class="section-title">Övrigt</div></span
-                        >
+                          <div class="section-title">Övrigt</div>
+                        </div>
                         <div class="checkbox-group">
                           <div class="checkbox-item">
                             <div
@@ -702,15 +698,15 @@
                     <div class="grid-one">
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Ange ett namn för bokningen, t.ex. 'Hem till mamma' eller 'Handla på Coop'."
                           >
                             <label class="section-title" for="booking-name"
                               ><i class="fas fa-pencil-alt"></i> Namnge ny
                               bokning</label
-                            ></span
-                          >
+                            >
+                          </div>
                           <input
                             type="text"
                             id="booking-name"
@@ -721,20 +717,21 @@
                         </div>
                       </div>
                       <div class="item">
-                        <span
+                        <div
                           class="tooltip"
                           title="Välj detta alternativ för att automatiskt fylla i din senaste bokning."
                         >
                           <label for="last-booking" class="section-title">
                             <i class="fas fa-sync-alt"></i>
                             Återanvänd min senaste Tur- och Returbokning</label
-                          ></span
-                        ><br />
+                          >
+                        </div>
+                        <br />
                         <input type="checkbox" id="last-booking" checked />
                       </div>
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj detta alternativ för att automatiskt fylla i från tidigare bokningar."
                           >
@@ -747,8 +744,8 @@
                                 title="Välj en tidigare bokning att återanvända"
                               ></i>
                               Återanvänd en tidigare Tur- och Returbokning
-                            </label></span
-                          >
+                            </label>
+                          </div>
 
                           <div class="dropdown-container">
                             <select id="important-bookings">
@@ -776,15 +773,15 @@
                     <div class="grid-two">
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Ange var du åker ifrån. Detta är startpunkten för resan."
                           >
                             <i class="fas fa-map-marker-alt"></i>
                             <label class="section-title" for="departure1">
                               Jag åker från</label
-                            ></span
-                          >
+                            >
+                          </div>
                         </div>
                         <div>
                           <select
@@ -813,33 +810,29 @@
                       </div>
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj datumet då du vill resa"
                           >
                             <i class="fas fa-calendar-day"></i>
-                            <label for="start-date-tab2"
-                              >Ange startdatum</label
-                            ></span
-                          >
+                            <label for="start-date-tab2">Ange startdatum</label>
+                          </div>
                           <input type="date" id="start-date-tab2" />
                         </div>
                       </div>
                       <div class="item">
                         <div class="time-container">
                           <!-- Flexbox för att hålla elementen i rad -->
-                          <!-- Label för starttid --><span
-                            class="tooltip"
-                            title="Ange starttid för resan"
-                          >
+                          <!-- Label för starttid -->
+                          <div class="tooltip" title="Ange starttid för resan">
                             <label for="start-time-outward">
                               <i class="fas fa-clock"></i> Ange starttid
                             </label>
-                          </span>
+                          </div>
 
                           <!-- Tid-input -->
                           <input type="time" id="start-time-outward" />
-                          <span
+                          <div
                             class="tooltip"
                             title="Innebär att upphämtningstiden styr. Ankomsttiden kan variera beroende på till exempel trafik."
                           >
@@ -855,22 +848,23 @@
                               <label for="from-time-control-outward-tab2">
                                 Styrtid
                                 <i class="fas fa-info-circle"></i>
-                              </label></div
-                          ></span>
+                              </label>
+                            </div>
+                          </div>
                         </div>
                       </div>
 
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Ange var du ska åka till. Detta är destinationen för resan."
                           >
                             <i class="fas fa-map-marker-alt"></i>
                             <label class="section-title" for="destination1">
                               Jag åker till</label
-                            ></span
-                          >
+                            >
+                          </div>
                         </div>
                         <div>
                           <select
@@ -898,31 +892,29 @@
                       </div>
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj datumet då du vill vara framme"
                           >
                             <i class="fas fa-calendar-check"></i>
-                            <label for="end-date-tab2"
-                              >Ange slutdatum</label
-                            ></span
-                          >
+                            <label for="end-date-tab2">Ange slutdatum</label>
+                          </div>
                           <input type="date" id="end-date-tab2" />
                         </div>
                       </div>
                       <div class="item">
                         <div class="time-container">
                           <!-- Tooltip för sluttid -->
-                          <span class="tooltip" title="Ange sluttid för resan">
+                          <div class="tooltip" title="Ange sluttid för resan">
                             <label for="end-time-outward">
                               <i class="fas fa-clock"></i> Ange sluttid
                             </label>
-                          </span>
+                          </div>
 
                           <!-- Tid-input -->
                           <input type="time" id="end-time-outward" />
 
-                          <span
+                          <div
                             class="tooltip"
                             title="Om du behöver vara framme en viss tid, planeras upphämtningen utifrån detta. Chauffören beräknar avgångstiden baserat på trafik och restid för att ankomsttiden ska hållas."
                           >
@@ -939,7 +931,7 @@
                                 <i class="fas fa-info-circle"></i>
                               </label>
                             </div>
-                          </span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -952,15 +944,15 @@
                     <div class="grid-two">
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Ange var du åker ifrån. Detta är startpunkten för resan."
                           >
                             <i class="fas fa-map-marker-alt"></i>
                             <label class="section-title" for="departure">
                               Jag åker från</label
-                            ></span
-                          >
+                            >
+                          </div>
                         </div>
                         <div>
                           <select
@@ -991,33 +983,29 @@
                       </div>
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj datumet då du vill resa"
                           >
                             <i class="fas fa-calendar-day"></i>
-                            <label for="start-date"
-                              >Ange startdatum</label
-                            ></span
-                          >
+                            <label for="start-date">Ange startdatum</label>
+                          </div>
                           <input type="date" id="start-date" />
                         </div>
                       </div>
                       <div class="item">
                         <div class="time-container">
                           <!-- Flexbox för att hålla elementen i rad -->
-                          <!-- Label för starttid --><span
-                            class="tooltip"
-                            title="Ange starttid för resan"
-                          >
+                          <!-- Label för starttid -->
+                          <div class="tooltip" title="Ange starttid för resan">
                             <label for="start-time-return">
                               <i class="fas fa-clock"></i> Ange starttid
                             </label>
-                          </span>
+                          </div>
 
                           <!-- Tid-input -->
                           <input type="time" id="start-time-return" />
-                          <span
+                          <div
                             class="tooltip"
                             title="Innebär att upphämtningstiden styr. Ankomsttiden kan variera beroende på till exempel trafik."
                           >
@@ -1033,22 +1021,23 @@
                               <label for="from-time-control-return-tab2">
                                 Styrtid
                                 <i class="fas fa-info-circle"></i>
-                              </label></div
-                          ></span>
+                              </label>
+                            </div>
+                          </div>
                         </div>
                       </div>
 
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Ange var du ska åka till. Detta är destinationen för resan."
                           >
                             <i class="fas fa-map-marker-alt"></i>
                             <label class="section-title" for="destination">
                               Jag åker till</label
-                            ></span
-                          >
+                            >
+                          </div>
                         </div>
                         <div>
                           <select
@@ -1074,29 +1063,29 @@
                       </div>
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj datumet då du vill vara framme"
                           >
                             <i class="fas fa-calendar-check"></i>
-                            <label for="end-date">Ange slutdatum</label></span
-                          >
+                            <label for="end-date">Ange slutdatum</label>
+                          </div>
                           <input type="date" id="end-date" />
                         </div>
                       </div>
                       <div class="item">
                         <div class="time-container">
                           <!-- Tooltip för sluttid -->
-                          <span class="tooltip" title="Ange sluttid för resan">
+                          <div class="tooltip" title="Ange sluttid för resan">
                             <label for="end-time-return">
                               <i class="fas fa-clock"></i> Ange sluttid
                             </label>
-                          </span>
+                          </div>
 
                           <!-- Tid-input -->
                           <input type="time" id="end-time-return" />
 
-                          <span
+                          <div
                             class="tooltip"
                             title="Om du behöver vara framme en viss tid, planeras upphämtningen utifrån detta. Chauffören beräknar avgångstiden baserat på trafik och restid för att ankomsttiden ska hållas."
                           >
@@ -1113,7 +1102,7 @@
                                 <i class="fas fa-info-circle"></i>
                               </label>
                             </div>
-                          </span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1126,16 +1115,14 @@
                     <div class="grid-three">
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj bokningsfrekvens. 'Boka endast denna resa' skapar en engångsbokning, medan 'Schemalagd bokning' upprepar resan enligt ett schema."
                           >
                             <i class="fas fa-sync-alt"></i>
 
-                            <label for="booking-frequency-tab2"
-                              >Frekvens</label
-                            ></span
-                          >
+                            <label for="booking-frequency-tab2">Frekvens</label>
+                          </div>
                           <select
                             id="booking-frequency-tab2"
                             onchange="toggleRecurringBooking()"
@@ -1149,13 +1136,13 @@
                       </div>
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj hur ofta bokningen ska upprepas. Intervallet baseras på den ursprungliga bokningen. Exempel: Om du bokar 'En gång i veckan' den 1 januari, schemaläggs nästa bokning den 8 januari (1 januari + 7 dagar)."
                           >
                             <i class="fas fa-location-arrow"></i>
                             <label for="interval-tab2">Intervall</label>
-                          </span>
+                          </div>
                           <select id="interval-tab2">
                             <option value="">Välj intervall</option>
                             <option value="daily">Varje dag</option>
@@ -1169,7 +1156,7 @@
                       </div>
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj datum för när den återkommande bokningen ska starta."
                           >
@@ -1177,8 +1164,8 @@
 
                             <label for="start-date-coming-tab2"
                               >Start återkommande bokning</label
-                            ></span
-                          >
+                            >
+                          </div>
                           <input
                             type="date"
                             id="start-date-coming-tab2"
@@ -1189,7 +1176,7 @@
                       </div>
                       <div class="item">
                         <div>
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj datum för när den återkommande bokningen ska avslutas."
                           >
@@ -1197,8 +1184,8 @@
 
                             <label for="end-date-coming-tab2"
                               >Slut återkommande bokning</label
-                            ></span
-                          >
+                            >
+                          </div>
                           <input
                             type="date"
                             id="end-date-coming-tab2"
@@ -1217,18 +1204,18 @@
                     <div class="grid-four">
                       <div class="item">
                         <div class="section-title">
-                          <span
+                          <div
                             class="tooltip"
                             title="Välj eventuella hjälpmedel som du behöver under resan"
                           >
                             <div class="section-titel">
                               <i class="fas fa-wheelchair"></i> Hjälpmedel
-                            </div></span
-                          >
+                            </div>
+                          </div>
                         </div>
                         <div class="checkbox-group">
                           <div class="checkbox-item">
-                            <span
+                            <div
                               class="tooltip"
                               title="Ta gärna med dig en käpp eller en krycka"
                             >
@@ -1236,11 +1223,11 @@
                                 <input type="checkbox" /> Käpp eller krycka
                                 <i class="fas fa-cane"></i>
                               </label>
-                            </span>
+                            </div>
                           </div>
 
                           <div class="checkbox-item">
-                            <span
+                            <div
                               class="tooltip"
                               title="Ta gärna med dig din rullator"
                             >
@@ -1248,11 +1235,11 @@
                                 <input type="checkbox" /> Rullator
                                 <i class="fas fa-walking"></i>
                               </label>
-                            </span>
+                            </div>
                           </div>
 
                           <div class="checkbox-item">
-                            <span
+                            <div
                               class="tooltip"
                               title="Om du tar med din rullstol bokas du automatiskt för ett specialfordon, så att rullstolen får plats."
                             >
@@ -1261,11 +1248,11 @@
                                 Rullstol
                                 <i class="fas fa-wheelchair"></i>
                               </label>
-                            </span>
+                            </div>
                           </div>
 
                           <div class="checkbox-item">
-                            <span
+                            <div
                               class="tooltip"
                               title="En ledsagare eller medpassagerare får följa med"
                             >
@@ -1274,17 +1261,17 @@
                                 medpassagerare
                                 <i class="fas fa-user-friends"></i>
                               </label>
-                            </span>
+                            </div>
                           </div>
                         </div>
                       </div>
                       <div class="item">
-                        <span
+                        <div
                           class="tooltip"
                           title="Ange övriga behov som du kan behöva under resan."
                         >
-                          <div class="section-title">Övrigt</div></span
-                        >
+                          <div class="section-title">Övrigt</div>
+                        </div>
                         <div class="checkbox-group">
                           <div class="checkbox-item">
                             <div
