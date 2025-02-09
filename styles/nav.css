@@ -229,8 +229,31 @@ address {
   border-radius: 8px;
 }
 
+/* .social-icons a img {
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+} */
+
+.social-icons a:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.2);
+}
+
 .footer .social-icons a {
-  padding: 0.75rem;
+  padding: 0.9rem;
+  margin-left: -0.15rem; /* Flyttar 0.1rem åt vänster */
+  margin-top: -0.1rem; /* Flyttar 0.1rem uppåt */
+}
+
+.footer .linkedin a {
+  padding: 0.9rem;
+  margin-left: -0.25rem; /* Flyttar 0.1rem åt vänster */
+  margin-top: -0.15rem; /* Flyttar 0.1rem uppåt */
+}
+
+.social-icons .pinterest a:hover img,
+.social-icons .linkedin a:hover img {
+  transform: scale(1.1);
+  filter: brightness(1);
 }
 
 .footer-section {
