@@ -83,23 +83,26 @@
             </div>
             <div class="right">
               <h2>Ändra bokning eller avboka resa</h2>
-              <p>Här kan du hantera dina bokningar.</p>
-              <p>
-                Du har möjlighet att redigera din resa eller avboka den helt.
-              </p>
               <div class="collapsible">
+                <h3 id="myBookingsHeading">Mina aktuella bokningar</h3>
+                <p>
+                  Här nedanför kan du visa eller dölja en lista över dina
+                  kommande resor.
+                </p>
+                <p>
+                  I tabellen som visas kan du välja att redigera en bokning
+                  eller avboka.
+                </p>
                 <button
                   class="collapsible-header"
                   aria-expanded="false"
                   aria-controls="myBookings"
+                  aria-labelledby="myBookingsHeading"
                 >
                   <span class="arrow">&#9656;</span>
-                  <h3>Mina aktuella bokningar</h3>
+                  <span>Visa / Dölj bokningar</span>
                 </button>
                 <div class="collapsible-content" id="myBookings">
-                  <p>Nedan ser du en lista över dina kommande resor.</p>
-                  <p>Du kan välja att redigera en bokning eller avboka.</p>
-
                   <table class="booking-table">
                     <thead>
                       <tr>
@@ -132,7 +135,6 @@
                           </button>
                         </td>
                       </tr>
-
                       <tr>
                         <td rowspan="2">17</td>
                         <td>Enkel Apoteket-Hem</td>

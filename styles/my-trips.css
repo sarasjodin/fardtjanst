@@ -621,6 +621,10 @@ form h3:not(:first-of-type) {
   transform: rotate(90deg);
 }
 
+#myBookingsHeading {
+  padding-bottom: 20px;
+}
+
 /* Knappar */
 .button-group {
   display: flex;
