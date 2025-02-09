@@ -171,13 +171,13 @@
                 aria-selected="true"
                 onclick="openTab(event, 'tab1')"
               >
-                <div
+                <span
                   class="tooltip"
                   title="Välj denna flik för att boka en enkelresa"
                 >
                   <i class="fas fa-home"></i>
                   <span class="h2-style">Enkel resa</span>
-                </div>
+                </span>
               </button>
               <button
                 class="tab"
@@ -187,13 +187,13 @@
                 aria-selected="false"
                 onclick="openTab(event, 'tab2')"
               >
-                <div
+                <span
                   class="tooltip"
                   title="Välj denna flik för att boka en Tur- och returresa"
                 >
                   <i class="fas fa-car"></i>
                   <span class="h2-style">Tur och retur</span>
-                </div>
+                </span>
               </button>
               <!-- <button class="tab" onclick="openTab(event, 'tab3')">
                 <i class="fas fa-user"></i> Flik 3
@@ -224,14 +224,14 @@
                             class="tooltip"
                             title="Ange ett namn för bokningen, t.ex. 'Hem till mamma' eller 'Handla på Coop'."
                           >
-                            <label class="section-title" for="booking-name"
+                            <label class="section-title" for="booking-name-tab1"
                               ><i class="fas fa-pencil-alt"></i> Namnge ny
                               bokning</label
                             >
                           </div>
                           <input
                             type="text"
-                            id="booking-name"
+                            id="booking-name-tab1"
                             class="input-field"
                             placeholder="Välj ett namn"
                             value="04/04/2025 Hem -> Dotter"
@@ -243,13 +243,13 @@
                           class="tooltip"
                           title="Välj detta alternativ för att automatiskt fylla i din senaste bokning."
                         >
-                          <label for="last-booking" class="section-title">
+                          <label for="last-booking-tab1" class="section-title">
                             <i class="fas fa-sync-alt"></i>
                             Återanvänd min senaste bokning</label
                           >
                         </div>
                         <br />
-                        <input type="checkbox" id="last-booking" checked />
+                        <input type="checkbox" id="last-booking-tab1" checked />
                       </div>
                       <div class="item">
                         <div>
@@ -259,7 +259,7 @@
                           >
                             <label
                               class="section-title"
-                              for="important-bookings"
+                              for="important-bookings-tab1"
                             >
                               <i
                                 class="fas fa-sync-alt"
@@ -270,7 +270,7 @@
                           </div>
 
                           <div class="dropdown-container">
-                            <select id="important-bookings">
+                            <select id="important-bookings-tab1">
                               <option value="">Välj</option>
                               <option value="03022025-hem-apotek">
                                 03/02/2025 Hem -> Apotek
@@ -702,14 +702,14 @@
                             class="tooltip"
                             title="Ange ett namn för bokningen, t.ex. 'Hem till mamma' eller 'Handla på Coop'."
                           >
-                            <label class="section-title" for="booking-name"
+                            <label class="section-title" for="booking-name-tab2"
                               ><i class="fas fa-pencil-alt"></i> Namnge ny
                               bokning</label
                             >
                           </div>
                           <input
                             type="text"
-                            id="booking-name"
+                            id="booking-name-tab2"
                             class="input-field"
                             placeholder="Välj ett namn"
                             value="04/04/2025 Hem -> Dotter -> Hem"
@@ -721,13 +721,13 @@
                           class="tooltip"
                           title="Välj detta alternativ för att automatiskt fylla i din senaste bokning."
                         >
-                          <label for="last-booking" class="section-title">
+                          <label for="last-booking-tab2" class="section-title">
                             <i class="fas fa-sync-alt"></i>
                             Återanvänd min senaste Tur- och Returbokning</label
                           >
                         </div>
                         <br />
-                        <input type="checkbox" id="last-booking" checked />
+                        <input type="checkbox" id="last-booking-tab2" checked />
                       </div>
                       <div class="item">
                         <div>
@@ -737,7 +737,7 @@
                           >
                             <label
                               class="section-title"
-                              for="important-bookings"
+                              for="important-bookings-tab2"
                             >
                               <i
                                 class="fas fa-sync-alt"
@@ -748,7 +748,7 @@
                           </div>
 
                           <div class="dropdown-container">
-                            <select id="important-bookings">
+                            <select id="important-bookings-tab2">
                               <option value="">Välj</option>
                               <option value="03022025-hem-apotek">
                                 03/02/2025 Hem -> Apotek -> Hem
