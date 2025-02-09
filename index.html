@@ -77,6 +77,60 @@
           <div class="main-container">
             <!-- HERO SEKTION -->
             <div class="upper">
+              <picture>
+                <!-- AVIF (för bästa kvalitet) -->
+                <source
+                  srcset="src/images/woman_1920.avif"
+                  media="(min-width: 1440px)"
+                  type="image/avif"
+                />
+                <source
+                  srcset="src/images/woman_1440.avif"
+                  media="(min-width: 1024px)"
+                  type="image/avif"
+                />
+                <source
+                  srcset="src/images/woman_1024.avif"
+                  media="(min-width: 768px)"
+                  type="image/avif"
+                />
+                <source
+                  srcset="src/images/woman_768.avif"
+                  media="(max-width: 767px)"
+                  type="image/avif"
+                />
+
+                <!-- WebP fallback -->
+                <source
+                  srcset="src/images/woman_1920.webp"
+                  media="(min-width: 1440px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="src/images/woman_1440.webp"
+                  media="(min-width: 1024px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="src/images/woman_1024.webp"
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="src/images/woman_768.webp"
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
+                <!-- JPEG som absolut sista alternativ -->
+                <img
+                  src="src/images/woman_1024.jpg"
+                  alt="En kvinna i rullstol får hjälp att resa"
+                  width="1024"
+                  height="768"
+                  class="background-image"
+                />
+              </picture>
               <div class="left">
                 <h1>Vi hjälper dig<br />att komma dit du ska</h1>
               </div>

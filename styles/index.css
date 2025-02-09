@@ -33,26 +33,39 @@ h3 {
 }
 
 .upper {
-  position: relative; /* Viktigt för att placera overlay korrekt */
-  background-image: url('../src/images/woman_in_wheel-chair.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative; /* Ensure correct stacking */
   display: flex;
-  flex-direction: column; /* Knappar i en kolumn på mobil */
+  flex-direction: column;
   padding: 20px;
+  overflow: hidden; /* Prevent overflow issues */
 }
 
-/* Skapa en transparent film (overlay) över bilden */
 .upper::before {
-  content: '';
+  content: ''; /* Necessary for pseudo-elements */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.6); /* Vit transparent overlay */
-  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.6); /* White with 60% transparency */
+  z-index: 1; /* Ensure it's above the background but below text */
+}
+
+/* Ensure text and form are above the overlay */
+.upper .left,
+.upper .right {
+  position: relative;
+  z-index: 2;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Anpassar bilden till containern */
+  z-index: -1; /* Ser till att bilden ligger bakom texten */
 }
 
 .lower .left,
