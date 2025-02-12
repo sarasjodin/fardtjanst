@@ -247,6 +247,14 @@ form {
   border-bottom: 1px solid #ccc;
 }
 
+.collapsible-text {
+  color: black;
+}
+
+.collapsible-text a {
+  color: black;
+}
+
 /* Lägg till fokusläge för tangentbordsanvändare */
 .collapsible-header:focus {
   outline: 3px solid #008080;
@@ -518,7 +526,6 @@ form {
     flex-direction: row;
     min-height: 550px;
     grid-template-rows: auto;
-
   }
 
   /* Vänster och höger sektioner i upper och lower*/
@@ -528,7 +535,6 @@ form {
     align-items: flex-start;
     z-index: 2; /* Säkerställer att texten syns över overlay */
     width: 100%;
-
   }
 
   .upper h1 {
@@ -543,12 +549,12 @@ form {
   .lower .left {
     background-color: #008080; /* Exempel: turkos bakgrund */
     color: white; /* Gör texten vit så att den syns bättre */
-            padding: 60px;
+    padding: 60px;
   }
 
   .lower .right {
     background-color: white; /* Exempel: vit bakgrund */
-            padding: 60px;
+    padding: 60px;
   }
 
   .sub-section {
