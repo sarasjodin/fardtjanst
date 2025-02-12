@@ -38,6 +38,8 @@ h3 {
   flex-direction: column;
   padding: 20px;
   overflow: hidden; /* Prevent overflow issues */
+  flex-wrap: wrap; /* Gör att elementen kan bryta rad */
+  gap: 10px;
 }
 
 .upper::before {
@@ -354,7 +356,10 @@ form {
   }
 
   .upper {
-    flex-direction: row;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap; /* Gör att elementen kan bryta rad */
+    gap: 10px;
   }
 
   /* Vänster och höger sektioner i `.upper` */
@@ -472,9 +477,10 @@ form {
     grid-column: 1 / -1; /* Sträcker sig över hela bredden */
     grid-row: 1; /* Första raden */
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding: 60px;
+    flex-direction: row;
+    flex-wrap: unset;
   }
 
   .lower {
@@ -499,7 +505,7 @@ form {
 
   .upper h1 {
     text-align: left;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #ffffff;
     max-width: 100%;
     z-index: 20;
@@ -599,10 +605,11 @@ form {
     grid-column: 1 / -1; /* Sträcker sig över hela bredden */
     grid-row: 1; /* Första raden */
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding: 80px;
     height: unset;
+    flex-direction: row;
+    flex-wrap: unset;
   }
 
   .lower {
@@ -627,7 +634,7 @@ form {
 
   .upper h1 {
     text-align: left;
-    font-size: 2rem;
+    font-size: 3.5rem;
     color: #ffffff;
     max-width: 100%;
     z-index: 20;
@@ -730,6 +737,7 @@ form {
     justify-content: space-between;
     padding: 80px;
     height: unset;
+    flex-wrap: unset;
   }
 
   .lower {
