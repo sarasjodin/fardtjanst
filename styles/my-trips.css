@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 /* Flikcontainer */
 h1 {
   font-size: 2rem;

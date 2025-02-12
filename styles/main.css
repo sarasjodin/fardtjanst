@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .header-section {
   background-color: #008080;
   color: white;
@@ -217,7 +221,6 @@ section {
     background: #f9f9f9;
     border-radius: 8px;
   }
-
 }
 
 @media (min-width: 1440px) and (max-width: 1600px) {

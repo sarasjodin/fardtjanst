@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 /* CSS Grid - Mobil-först */
 .main-container {
   display: grid;
