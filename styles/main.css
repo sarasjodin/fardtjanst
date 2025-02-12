@@ -10,6 +10,75 @@
   gap: 20px;
 }
 
+.main-container a {
+  color: #095c5c;
+  background-color: rgb(234, 232, 232);
+  padding: 0.3rem;
+  border-radius: 8px;
+  line-height: 1.7;
+}
+
+.main-container a:hover {
+  color: #095c5c;
+  font-weight: 600;
+}
+
+.main-container ul,
+.main-container ol {
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.accessibility-improvements,
+.site-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.accessibility-improvements caption,
+.site-info-table caption {
+  font-weight: bold;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.accessibility-improvements th,
+.accessibility-improvements td,
+.site-info-table th,
+.site-info-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.accessibility-improvements th,
+.site-info-table th {
+  background-color: #008080;
+  color: white;
+  text-align: left;
+}
+
+.accessibility-improvements tr:nth-child(even),
+.site-info-table tr:nth-child(even) {
+  background-color: rgba(
+    0,
+    128,
+    128,
+    0.1
+  ); /* Ljusare turkos bakgrund för varannan rad */
+}
+
+.accessibility-improvements a,
+.site-info-table a {
+  color: #008080;
+  text-decoration: underline;
+}
+
+.accessibility-improvements a:hover,
+.site-info-table a:hover {
+  color: #005555;
+}
+
 h1 {
   font-size: 2rem;
   margin-bottom: 10px;

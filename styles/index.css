@@ -231,7 +231,6 @@ form {
   border: none;
   outline: none;
   text-align: left;
-  padding: 12px;
   cursor: pointer;
   display: flex;
   gap: 10px; /* Avstånd mellan pil och text */
@@ -755,7 +754,7 @@ form {
 
   .upper h1 {
     text-align: left;
-    font-size: 2rem;
+    font-size: 3.5rem;
     color: #ffffff;
     max-width: 100%;
     z-index: 20;
