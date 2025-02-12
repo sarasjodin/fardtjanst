@@ -8,6 +8,8 @@
   display: grid;
   grid-template-columns: 1fr; /* Mobil: en kolumn */
   gap: 20px;
+  padding: 80px;
+  width: auto;
 }
 
 .main-container a {
