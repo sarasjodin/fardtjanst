@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: 1fr; /* Mobil: en kolumn */
   gap: 20px;
-  padding: 80px;
+  padding: 40px;
   width: auto;
 }
 
@@ -36,6 +36,7 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  max-width: 600px;
 }
 
 .accessibility-improvements caption,
@@ -132,13 +133,17 @@ p {
 }
 
 section {
-  padding: 0 0 40px 0;
+  padding: 40px;
+}
+
+.price-page .left > section:nth-child(1) {
+  padding: unset;
 }
 
 .price-table {
   width: 90%;
   max-width: 600px;
-  margin: 20px 20px 0 0;
+  margin: 40px;
   border-collapse: collapse;
   background-color: #f9f9f9;
   border-radius: 8px;

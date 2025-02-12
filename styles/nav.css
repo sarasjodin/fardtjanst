@@ -19,6 +19,7 @@
   padding: 0 2rem;
   max-width: 100%;
   margin: 0 auto;
+  z-index: 99998;
 }
 
 .logo-container {
@@ -164,7 +165,6 @@
   border: none;
   cursor: pointer;
   z-index: 99999;
-  color:white;
 }
 
 .hamburger-menu span {

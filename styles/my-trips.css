@@ -38,10 +38,6 @@ p {
   width: 50%;
 }
 
-.tab:focus {
-  outline: 3px solid #ff9800;
-}
-
 /* Flik 1 (vänster) – Lutar inåt till höger */
 .tab:first-child {
   clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
@@ -686,6 +682,11 @@ form h3:not(:first-of-type) {
 
 .login:hover {
   background: #005f5f;
+}
+
+.btn:focus {
+  outline: 3px solid #008080;
+  background-color: #005f5f;
 }
 
 @media (min-width: 480px) and (max-width: 1025px) {

@@ -25,7 +25,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .upper .left {
@@ -36,7 +36,8 @@ h3 {
   position: relative; /* Ensure correct stacking */
   display: flex;
   flex-direction: column;
-  padding: 20px;
+
+  padding: 30px 40px;
   overflow: hidden; /* Prevent overflow issues */
   flex-wrap: wrap; /* Gör att elementen kan bryta rad */
   gap: 10px;
@@ -58,6 +59,11 @@ h3 {
 .upper .right {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2; /* Säkerställer att texten syns över overlay */
+  width: 100%;
 }
 
 .background-image {
@@ -101,7 +107,7 @@ h3 {
 .lower p {
   font-size: 1.1rem;
   padding: 0 0 10px 0;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
 .lower ol {
@@ -237,7 +243,7 @@ form {
   display: flex;
   gap: 10px; /* Avstånd mellan pil och text */
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   border-bottom: 1px solid #ccc;
 }
 
@@ -360,6 +366,8 @@ form {
     display: flex;
     flex-wrap: wrap; /* Gör att elementen kan bryta rad */
     gap: 10px;
+    justify-content: end;
+    margin: 0px;
   }
 
   /* Vänster och höger sektioner i `.upper` */
@@ -385,9 +393,13 @@ form {
     z-index: 2;
   }
 
-  .lower .left,
-  .lower .right {
+  .lower .left {
     padding: 40px;
+    height: auto;
+  }
+
+  .lower .right {
+    padding: 60px 80px;
     height: auto;
   }
 
@@ -413,6 +425,20 @@ form {
 
   .lower ol li:nth-child(3) {
     margin-left: 100px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 750px) {
+  .lower .right {
+    padding: 60px 110px;
+    height: auto;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1025px) {
+  .lower .right {
+    padding: 60px 200px;
+    height: auto;
   }
 }
 
@@ -492,6 +518,7 @@ form {
     flex-direction: row;
     min-height: 550px;
     grid-template-rows: auto;
+
   }
 
   /* Vänster och höger sektioner i upper och lower*/
@@ -501,6 +528,7 @@ form {
     align-items: flex-start;
     z-index: 2; /* Säkerställer att texten syns över overlay */
     width: 100%;
+
   }
 
   .upper h1 {
@@ -514,13 +542,13 @@ form {
 
   .lower .left {
     background-color: #008080; /* Exempel: turkos bakgrund */
-    padding: 60px;
     color: white; /* Gör texten vit så att den syns bättre */
+            padding: 60px;
   }
 
   .lower .right {
     background-color: white; /* Exempel: vit bakgrund */
-    padding: 40px;
+            padding: 60px;
   }
 
   .sub-section {
