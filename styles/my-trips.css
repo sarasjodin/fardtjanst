@@ -360,6 +360,35 @@ button.tab .fa-car {
   border-radius: 5px;
 }
 
+.change-booking-button {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.delete-btn {
+  background-color: #95022e; /* Röd */
+  color: white;
+  border: 2px solid #a71d2a; /* Mörkare röd ram */
+}
+.delete-btn:hover {
+  background-color: #4d050c; /* Mörkare röd vid hovring */
+}
+
+.edit-btn {
+  background-color: #008080; /* Blå */
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #015555; /* Mörkare blå vid hovring */
+}
+
 /* Responsiv: 1 kolumn på mindre skärmar */
 /* @media (max-width: 768px) { */
 /* Inputfält */
