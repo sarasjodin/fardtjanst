@@ -353,15 +353,17 @@ button.tab .fa-car {
   color: rgb(0, 0, 0);
 }
 
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 /* Responsiv: 1 kolumn på mindre skärmar */
 /* @media (max-width: 768px) { */
 /* Inputfält */
-/* .input-field {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+/*
 
   .checkbox-group i {
     color: #007bff;
