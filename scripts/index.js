@@ -103,3 +103,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const menuButton = document.querySelector('.hamburger-menu');
+  const navMenu = document.querySelector('.nav');
+
+  menuButton.addEventListener('click', function () {
+    navMenu.classList.toggle('active');
+
+    // Ändra aria-expanded för tillgänglighet
+    const expanded =
+      menuButton.getAttribute('aria-expanded') === 'true' || false;
+    menuButton.setAttribute('aria-expanded', !expanded);
+  });
+});
