@@ -67,12 +67,11 @@
   text-align: left; /* Justera texten till vänster */
   border-radius: 5px; /* Lägg till en mjukare stil */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Förhöjd stil */
-  z-index: 999;
 }
 
 .nav.active {
   display: flex;
-  z-index: 998;
+  z-index: 1500;
 }
 
 .menu-items {
@@ -80,7 +79,6 @@
   padding: 5% 10%;
   display: flex; /* Lägger till flex för horisontell layout */
   flex-direction: column; /* Standard layout för mobiler */
-  z-index: 1000;
 }
 
 .menu-items li {
@@ -114,6 +112,7 @@
 .dropdown-menu {
   display: none;
   position: static;
+  z-index: 2000;
 }
 
 .dropdown-menu.active {
@@ -130,7 +129,7 @@
 }
 
 .nav .dropdown-menu {
-  z-index: 10; /* Se till att dropdownen visas ovanför allt annat */
+  z-index: 1950; /* Se till att dropdownen visas ovanför allt annat */
 }
 
 .nav .dropdown:hover .dropdown-menu {
@@ -148,7 +147,6 @@
   border-color: transparent transparent transparent white; /* Pilar pekar åt höger */
   transform: rotate(0deg); /* Standard, pekar åt höger */
   transition: transform 0.3s ease; /* Mjuk övergång vid öppning/stängning */
-  z-index: 1000;
 }
 
 /* När dropdownmenyn är aktiv, peka pilen nedåt */
@@ -165,6 +163,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 9999;
 }
 
 .hamburger-menu span {
@@ -428,7 +427,7 @@ i.fas {
 
   .menu-items .dropdown-menu {
     background-color: rgb(68, 68, 68);
-    z-index: 1000;
+    z-index: 2010;
     border-radius: 8px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
   }
