@@ -75,24 +75,77 @@
       <main>
         <section class="header-section">
           <div class="header-title">
-            <h1>Tillgänglig&shy;hets&shy;redo&shy;görelse</h1>
-            <p class="ingress">
-              Färdtjänst Örebro är en fiktiv webbplats skapad av Sara Sjödin
-              Scolari, student vid Mitt&shy;universit&shy;etets
-              Webb&shy;utvecklings- och System&shy;utvecklings&shy;program.
-            </p>
-            <p class="ingress">
-              Projektet syftar till att utveckla en webbplats med fokus på
-              tillgänglighet och användbarhet. Jag har aktivt arbetat för att
-              göra den tillgänglig för alla, oavsett fysiska, kognitiva eller
-              tekniska förutsättningar.
-            </p>
+            <div class="main-container">
+              <div class="left">
+                <h1>Tillgänglig&shy;hets&shy;redo&shy;görelse</h1>
+                <p class="ingress">
+                  Färdtjänst Örebro är en fiktiv webbplats skapad av Sara Sjödin
+                  Scolari, student vid Mitt&shy;universit&shy;etets
+                  Webb&shy;utvecklings&shy;program.
+                </p>
+                <p class="ingress">
+                  Projektet syftar till att utveckla en webbplats med fokus på
+                  tillgänglighet och användbarhet. Jag har aktivt arbetat för
+                  att göra den tillgänglig för alla, oavsett fysiska, kognitiva
+                  eller tekniska förutsättningar.
+                </p>
+              </div>
+
+              <div class="right">
+                <picture>
+                  <!-- AVIF-format (bästa kvalitet och minsta filstorlek) -->
+                  <source
+                    srcset="src/images/youth_wheelchair_800.avif"
+                    media="(min-width: 1600px)"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="src/images/youth_wheelchair_600.avif"
+                    media="(min-width: 1024px)"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="src/images/youth_wheelchair_400.avif"
+                    media="(max-width: 1023px)"
+                    type="image/avif"
+                  />
+
+                  <!-- WebP som fallback -->
+                  <source
+                    srcset="src/images/youth_wheelchair_800.webp"
+                    media="(min-width: 1600px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="src/images/youth_wheelchair_600.webp"
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="src/images/youth_wheelchair_400.webp"
+                    media="(max-width: 1023px)"
+                    type="image/webp"
+                  />
+
+                  <!-- JPG som absolut sista fallback -->
+                  <img
+                    src="src/images/youth_wheelchair_400.jpg"
+                    alt="En 14-årig pojke i rullstol sitter avslappnad i en färdtjänstbil med ögonen slutna."
+                    width="400"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
+                    class="youth-image"
+                  />
+                </picture>
+              </div>
+            </div>
           </div>
         </section>
-        <div class="main-container">
+        <div>
           <div>
-            <section class="left">
-              <h1>Webbplatsinformation</h1>
+            <section class="one-column">
+              <h2>Webbplatsinformation</h2>
               <table class="site-info-table">
                 <caption>
                   Information om Färdtjänst Örebros webbplats
@@ -106,7 +159,7 @@
                 <tbody>
                   <tr>
                     <td><strong>Aktör</strong></td>
-                    <td>Färdtjänst Örebro</td>
+                    <td>Färdtjänst Örebro genom Örebro kommun</td>
                   </tr>
                   <tr>
                     <td><strong>Webbplatsens namn</strong></td>
@@ -144,10 +197,10 @@
               </table>
             </section>
 
-            <section class="left">
+            <section class="one-column">
               <h2>Standarder och efterlevnad</h2>
               <p>
-                Webbplatsen följer WCAG 2.2 AA-standarder och har genomgått
+                Webbplatsen följer WCAG 2.1 AA-standarder och har genomgått
                 användartester. Mitt mål är att du som användare ska kunna
                 uppfatta, navigera och använda den utan hinder.
                 <br />
@@ -155,7 +208,7 @@
                 enligt lag krävs för alla webbplatser som ska vara tillgängliga.
               </p>
             </section>
-            <section>
+            <section class="one-column">
               <h2>Tillgängliga funktioner</h2>
               <p>
                 Hjälpmedel och tillgänglighetsfunktioner som webbplatsen stöder
@@ -170,7 +223,7 @@
                 </ul>
               </div>
             </section>
-            <section>
+            <section class="one-column">
               <h2>Kända brister</h2>
               <p>
                 Vi strävar efter att göra vår webbplats helt tillgänglig, men vi
@@ -203,9 +256,7 @@
               <h3>Länkar och knappar</h3>
               <p>Alla länktexter är inte tillräckligt beskrivande.</p>
             </section>
-          </div>
-          <div class="right">
-            <section>
+            <section class="one-column">
               <h2>Handlingsplan</h2>
               <p>
                 Vi arbetar dagligen med att förbättra tillgängligheten på vår
@@ -215,16 +266,16 @@
                 våra framsteg på denna sida.
               </p>
             </section>
-            <section>
+            <section class="one-column">
               <h2>Hur vi testar tillgänglighet</h2>
               <p>
                 Vi testar regelbundet vår webbplats för att säkerställa att den
-                följer riktl- injerna i WCAG 2.2 på nivå AA. Vi genomför både
+                följer riktlinjerna i WCAG 2.1 på nivå AA. Vi genomför både
                 automatiska tester och manuella granskningar med hjälp av
                 verktyg och användare med olika behov.
               </p>
             </section>
-            <section>
+            <section class="one-column">
               <h2>Vårt mål med tillgänglighet</h2>
               <p>
                 Vi vill att Färdtjänst Örebros webbplats ska kunna uppfattas,
@@ -233,7 +284,7 @@
                 användarvänlig och tillgänglig som möjligt.
               </p>
             </section>
-            <section>
+            <section class="one-column">
               <h2>Kontakta oss</h2>
               <p>
                 Vi uppskattar din hjälp med att identifiera brister så att vi
@@ -255,22 +306,24 @@
                   </li>
                   <li>
                     <strong>Meddelandefunktion</strong>
-                    Du kan använda vår meddelandefunktion via vår webbplats på
-                    sidan
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Gå till vår meddelandefunktion"
-                      >Kontakta oss</a
-                    >.
                   </li>
                 </ul>
+                <p>
+                  Du kan använda vår meddelandefunktion via vår webbplats på
+                  sidan
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Gå till vår meddelandefunktion"
+                    >Kontakta oss</a
+                  >.
+                </p>
               </div>
 
               <p>Vi tar tacksamt emot dina synpunkter!</p>
             </section>
-            <section>
+            <section class="one-column">
               <h2>Anmälan till Digg</h2>
               <p>
                 Vi hoppas naturligtvis att du ser att vi kontinuerligt jobbar på
@@ -289,7 +342,7 @@
                 >
               </p>
             </section>
-            <section class="left">
+            <section class="one-column">
               <h2>Våra senaste fem förbättringar</h2>
               <table class="accessibility-improvements">
                 <caption>

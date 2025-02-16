@@ -16,7 +16,8 @@
   width: auto;
 }
 
-.main-container a {
+.main-container a,
+.one-column a {
   color: #095c5c;
   background-color: rgb(234, 232, 232);
   padding: 0.3rem;
@@ -35,12 +36,27 @@
   line-height: 1.6;
 }
 
+.accessibility-improvements td,
+.site-info-table td {
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.accessibility-improvements th,
+.site-info-table th,
+.accessibility-improvements caption,
+.site-info-table caption {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
 .accessibility-improvements,
 .site-info-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
-  max-width: 600px;
+  max-width: 900px;
 }
 
 .accessibility-improvements caption,
@@ -113,6 +129,12 @@ p {
   padding-left: 50px;
 }
 
+.one-column a:hover,
+.box a:hover {
+  color: black;
+  background-color: rgba(0, 128, 128, 0.1);
+}
+
 .ingress {
   font-weight: bold;
   font-size: 1.3rem;
@@ -152,10 +174,11 @@ section {
 }
 
 .price-table caption {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: black;
   text-align: left;
   padding-bottom: 1rem;
+  font-weight: bold;
 }
 
 .price-table th,
@@ -166,7 +189,7 @@ section {
 }
 
 .price-table th {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 
 .price-table thead {
@@ -191,6 +214,29 @@ section {
 
 .price-table td {
   color: black;
+  font-size: 1.3rem;
+}
+
+div.right:nth-child(2) {
+  background-color: unset;
+}
+
+div.right:nth-child(2) img {
+  border-radius: 8px;
+  border: 10px solid rgba(255, 255, 255, 0.3);
+}
+
+img.youth-image {
+  border-radius: 8px;
+  border: 10px solid rgba(255, 255, 255, 0.3);
+}
+
+.one-column {
+  padding: 40px 120px;
+}
+
+section.one-column:nth-child(1) {
+  padding: 80px 120px;
 }
 
 @media (min-width: 480px) and (max-width: 1025px) {
