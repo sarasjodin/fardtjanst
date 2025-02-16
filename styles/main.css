@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.container {
+  width: 100%;
+}
+
 .header-section {
   background-color: #008080;
   color: white;
@@ -15,17 +19,13 @@
   width: auto;
 }
 
-.one-column {
-  padding: 80px 120px;
-}
-
 .next.one-column {
-  padding: 80px 120px;
+  padding: 30px 40px;
 }
 
 .start.one-column {
   background-color: #008080;
-  padding: 80px 120px;
+  padding: 30px 40px;
   color: white;
 }
 
@@ -177,8 +177,8 @@ section {
 
 .price-table {
   width: 90%;
-  max-width: 600px;
-  margin: 40px;
+  max-width: 100%;
+  margin: 40px 0;
   border-collapse: collapse;
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -242,10 +242,8 @@ div.right:nth-child(2) img {
 img.youth-image {
   border-radius: 8px;
   border: 10px solid rgba(255, 255, 255, 0.3);
-}
-
-.one-column {
-  padding: 40px 120px;
+  max-width: 100%;
+  height: auto;
 }
 
 @media (min-width: 480px) and (max-width: 1025px) {
@@ -260,6 +258,20 @@ img.youth-image {
   .header-section {
     padding: 80px;
   }
+
+  .one-column {
+    padding: 80px 120px;
+  }
+
+  .next.one-column {
+    padding: 80px 120px;
+  }
+
+  .start.one-column {
+    background-color: #008080;
+    padding: 80px 120px;
+    color: white;
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
@@ -273,6 +285,20 @@ img.youth-image {
   .right {
     background: #f9f9f9;
     border-radius: 8px;
+  }
+
+  .one-column {
+    padding: 80px 120px;
+  }
+
+  .next.one-column {
+    padding: 80px 120px;
+  }
+
+  .start.one-column {
+    background-color: #008080;
+    padding: 80px 120px;
+    color: white;
   }
 }
 
@@ -295,6 +321,20 @@ img.youth-image {
   .header-section {
     padding: 80px;
   }
+
+  .one-column {
+    padding: 80px 120px;
+  }
+
+  .next.one-column {
+    padding: 80px 120px;
+  }
+
+  .start.one-column {
+    background-color: #008080;
+    padding: 80px 120px;
+    color: white;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -305,6 +345,20 @@ img.youth-image {
   }
   .header-section {
     padding: 80px;
+  }
+
+  .one-column {
+    padding: 80px 120px;
+  }
+
+  .next.one-column {
+    padding: 80px 120px;
+  }
+
+  .start.one-column {
+    background-color: #008080;
+    padding: 80px 120px;
+    color: white;
   }
 
   section.price-list {
