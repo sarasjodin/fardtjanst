@@ -12,8 +12,21 @@
   display: grid;
   grid-template-columns: 1fr; /* Mobil: en kolumn */
   gap: 20px;
-  padding: 40px;
   width: auto;
+}
+
+.one-column {
+  padding: 80px 120px;
+}
+
+.next.one-column {
+  padding: 80px 120px;
+}
+
+.start.one-column {
+  background-color: #008080;
+  padding: 80px 120px;
+  color: white;
 }
 
 .main-container a,
@@ -235,14 +248,9 @@ img.youth-image {
   padding: 40px 120px;
 }
 
-section.one-column:nth-child(1) {
-  padding: 80px 120px;
-}
-
 @media (min-width: 480px) and (max-width: 1025px) {
   .main-container {
     grid-template-columns: 1fr;
-    padding: 40px;
   }
 
   .right {
@@ -260,7 +268,6 @@ section.one-column:nth-child(1) {
   }
   .main-container {
     grid-template-columns: 1fr;
-    padding: 40px;
   }
 
   .right {
@@ -279,7 +286,6 @@ section.one-column:nth-child(1) {
   }
   .main-container {
     grid-template-columns: 3fr 2fr; /* 2/3 vänster, 1/3 höger */
-    padding: 40px;
   }
 
   .right {
@@ -306,7 +312,6 @@ section.one-column:nth-child(1) {
   }
   .main-container {
     grid-template-columns: 3fr 2fr;
-    padding: 40px;
   }
 
   .right {
