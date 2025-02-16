@@ -385,6 +385,10 @@ i.fas {
     width: 50%;
   }
 
+  .nav.active {
+    width: 50%;
+  }
+
   img.logo {
     max-width: 150px;
     padding-bottom: 0.5rem;
@@ -408,6 +412,10 @@ i.fas {
 
 @media (min-width: 600px) and (max-width: 1025px) {
   .nav {
+    width: 40%;
+  }
+
+  .nav.active {
     width: 40%;
   }
 
