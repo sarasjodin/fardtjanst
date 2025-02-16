@@ -26,6 +26,9 @@ section {
   max-width: 100%;
   z-index: 20;
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 20px;
 }
 
 h2 {
