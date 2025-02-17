@@ -29,6 +29,10 @@
   color: white;
 }
 
+section {
+  padding: 40px;
+}
+
 .main-container a,
 .one-column a {
   color: #095c5c;
@@ -171,10 +175,6 @@ p {
   font-size: 1.4rem;
 }
 
-section {
-  padding: 40px;
-}
-
 .price-table {
   width: 90%;
   max-width: 100%;
@@ -236,14 +236,16 @@ div.right:nth-child(2) {
 
 div.right:nth-child(2) img {
   border-radius: 8px;
-  border: 10px solid rgba(255, 255, 255, 0.3);
+  border: 8px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 img.youth-image {
   border-radius: 8px;
-  border: 10px solid rgba(255, 255, 255, 0.3);
+  border: 8px solid rgba(255, 255, 255, 0.8);
   max-width: 100%;
   height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media (min-width: 480px) and (max-width: 1025px) {
@@ -260,16 +262,16 @@ img.youth-image {
   }
 
   .one-column {
-    padding: 80px 120px;
+    padding: 50px 70px;
   }
 
   .next.one-column {
-    padding: 80px 120px;
+    padding: 50px 70px;
   }
 
   .start.one-column {
     background-color: #008080;
-    padding: 80px 120px;
+    padding: 50px 70px;
     color: white;
   }
 }
@@ -288,16 +290,16 @@ img.youth-image {
   }
 
   .one-column {
-    padding: 80px 120px;
+    padding: 40px 100px;
   }
 
   .next.one-column {
-    padding: 80px 120px;
+    padding: 80px 100px;
   }
 
   .start.one-column {
     background-color: #008080;
-    padding: 80px 120px;
+    padding: 80px 100px;
     color: white;
   }
 }
@@ -323,7 +325,7 @@ img.youth-image {
   }
 
   .one-column {
-    padding: 80px 120px;
+    padding: 40px 120px;
   }
 
   .next.one-column {
@@ -334,6 +336,10 @@ img.youth-image {
     background-color: #008080;
     padding: 80px 120px;
     color: white;
+  }
+
+  img.youth-image {
+    margin-left: 30px;
   }
 }
 
@@ -348,7 +354,7 @@ img.youth-image {
   }
 
   .one-column {
-    padding: 80px 120px;
+    padding: 40px 120px;
   }
 
   .next.one-column {
@@ -374,5 +380,9 @@ img.youth-image {
   }
   .header-section {
     padding: 80px;
+  }
+
+  img.youth-image {
+    margin-left: 30px;
   }
 }

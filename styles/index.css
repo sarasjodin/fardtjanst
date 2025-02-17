@@ -26,9 +26,9 @@ section {
   max-width: 100%;
   z-index: 20;
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
-  background-color: rgba(0, 0, 0, 0.3);
+  /*background-color: rgba(0, 0, 0, 0.3);
   border-radius: 8px;
-  padding: 20px;
+  padding: 20px; */
 }
 
 h2 {
@@ -47,7 +47,6 @@ h3 {
   position: relative; /* Ensure correct stacking */
   display: flex;
   flex-direction: column;
-
   padding: 30px 40px;
   overflow: hidden; /* Prevent overflow issues */
   flex-wrap: wrap; /* Gör att elementen kan bryta rad */
@@ -61,7 +60,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.6); /* White with 60% transparency */
+  background-color: rgba(255, 255, 255, 0.3); /* White with 60% transparency */
   z-index: 1; /* Ensure it's above the background but below text */
 }
 
