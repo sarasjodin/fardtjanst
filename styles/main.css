@@ -177,7 +177,7 @@ p {
 
 .price-table {
   width: 90%;
-  max-width: 100%;
+  max-width: 500px;
   margin: 40px 0;
   border-collapse: collapse;
   background-color: #f9f9f9;
